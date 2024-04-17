@@ -1,10 +1,10 @@
-# Laboratorium 8: Lista jedno-kierunkowa o unikalnych elementach obudowujące `double` i `std::string` w hierarchii + parser + rzutowanie + wyjątki
+# Laboratorium 8: Lista jednokierunkowa o unikalnych elementach obudowujące `double` i `std::string` w hierarchii + parser + rzutowanie + wyjątki
 W zadaniu chodzi o to, żeby Państwo zrobili program od początku do końca, który coś robi jako całość. Tym czymś jest parser standardowego wyjścia odpowiadający na komendy. Coś na kształt notatnika z historią.
-Drugim aspektem jest aby Państwo zaimplementowali listę jedno-kierunkową wraz z iteratorami.
+Drugim aspektem jest aby Państwo zaimplementowali listę jednokierunkową wraz z iteratorami.
 Te dwa aspekty się łączą w jedną całość, dlatego też jest to jedno zadanie, ale o dłuższym terminie oddania.
 
 ### Do zrobienia:
-1. Implementacja listy jedno-kierunkowej na kształt `std::forward_list`, z tymże trzymanymi w liście mają być wskaźniki do `Object*`.
+1. Implementacja listy jednokierunkowej na kształt `std::forward_list`, z tymże trzymanymi w liście mają być wskaźniki do `Object*`.
    Nie wiedząc czegoś warto się przyjrzeć dokumentacji [std::forward_list](https://en.cppreference.com/w/cpp/container/forward_list) - starałem się zachować dużą zbieżność (ale musiałem coś trudnego dodać od siebie).
     1. Zaimplementuj konstruktor bezargumentowy, oraz metody `size()` i `empty()`, po ich zdefiniowaniu zakomentuj makro:
     `UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS`
