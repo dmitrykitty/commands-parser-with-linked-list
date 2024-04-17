@@ -1,0 +1,1 @@
+DoubleObject(5.000000)

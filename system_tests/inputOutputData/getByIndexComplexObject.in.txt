@@ -1,0 +1,10 @@
+add ComplexObject:1+4i
+get 0
+add ComplexObject:4-2i
+get 0
+add ComplexObject:44
+get 0
+add ComplexObject:22i
+get 0
+add ComplexObject:i
+get 0

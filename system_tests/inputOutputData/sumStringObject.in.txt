@@ -1,0 +1,6 @@
+add StringObject:Kazdy
+add DoubleObject:1
+add StringObject: test, ktory przechodzi, to
+add DoubleObject:1
+add StringObject: wiecej punktow!
+sum StringObject

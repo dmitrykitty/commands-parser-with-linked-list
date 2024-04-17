@@ -1,0 +1,4 @@
+IntObject(6)
+DoubleObject(10.000000)
+StringObject("Grazyna i JanuszGrazyna i Janusz")
+ComplexObject(8+4i)

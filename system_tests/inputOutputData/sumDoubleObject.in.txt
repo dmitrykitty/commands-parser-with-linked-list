@@ -1,0 +1,7 @@
+add StringObject:Liczba
+add IntObject:5
+add StringObject: odjac PI
+add DoubleObject:3.1415926
+add StringObject: to ec:
+add DoubleObject:1.8584074
+sum DoubleObject

@@ -1,0 +1,9 @@
+add IntObject:3
+add DoubleObject:5
+add StringObject:Grazyna i Janusz
+add ComplexObject:4+2i
+mul 2
+sum IntObject
+sum DoubleObject
+sum StringObject
+sum ComplexObject

@@ -1,0 +1,5 @@
+ComplexObject(1+4i)
+ComplexObject(4-2i)
+ComplexObject(44)
+ComplexObject(0+22i)
+ComplexObject(0+1i)
