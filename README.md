@@ -178,7 +178,6 @@ The rest will be taken care of automatically. You can check the `GRADE.md` file 
 ## Project Structure
 
     .
-    └── zaj8i9UniqueObjectList_and_parser           # directory containing exercises
     ├── CMakeLists.txt                          # CMake configuration file - the file is to open out project in our IDE
     ├── main.cpp                                # main file - here we can test out solution manually, but it is not required
     ├── object.h                                # base (and probably abstract) class for various types header
