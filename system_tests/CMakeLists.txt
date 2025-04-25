@@ -1,5 +1,9 @@
 project(system_tests)
 
+# Disabling include-what-you-use for GTest
+set_target_properties(gtest PROPERTIES CXX_INCLUDE_WHAT_YOU_USE "")
+set_target_properties(gtest_main PROPERTIES CXX_INCLUDE_WHAT_YOU_USE "")
+
 option(SYSTEM_TESTS_WITH_BOOST "set ON to use boost otherwise use tiny process library" OFF)
 
 

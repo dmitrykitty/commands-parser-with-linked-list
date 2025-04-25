@@ -1,24 +1,62 @@
-cmake_minimum_required(VERSION 3.16)
-project(zad8CommandsParser)
+cmake_minimum_required(VERSION 3.19)
+project(zad8CommandsParser_dlaStudentow)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+set(UNIT_TEST_DIRECTORY "unit_tests")
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     include(CheckCXXCompilerFlag)
     CHECK_CXX_COMPILER_FLAG("/std:c++latest" _cpp_latest_flag_supported)
     if (_cpp_latest_flag_supported)
-        add_compile_options("/std:c++latest")
+        add_compile_options("/std:c++latest /Wall /WX")
     endif()
 else()
-    set(CMAKE_CXX_FLAGS "--std=c++23 -Wall -Wextra -pedantic")
+    set(CMAKE_CXX_FLAGS "--std=c++${CMAKE_CXX_STANDARD} -Wall -Wextra -pedantic -Wno-error=deprecated-declarations")
     set(COMPILER_DEBUG_FLAGS "-D_DEBUG")
     set(COMPILER_RELEASE_FLAGS "-O3 -DNDEBUG")
-    set(LINKER_FLAGS "--std=c++23")
+    set(LINKER_FLAGS "--std=c++${CMAKE_CXX_STANDARD}")
 endif()
 
 set(CMAKE_BUILD_TYPE Debug)
+
+# Na Linuxie dla kompilatorow g++ i Clang moga byc dostepne sanitizery:
+if (NOT CMAKE_SYSTEM_NAME MATCHES "Windows" AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    include(CheckLibraryExists)
+
+    check_library_exists(asan __asan_init "" HAVE_LIBASAN)
+    check_library_exists(ubsan __ubsan_handle_add_overflow "" HAVE_LIBUBSAN)
+
+    if (HAVE_LIBASAN AND HAVE_LIBUBSAN)
+        message(STATUS "Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,undefined")
+    else()
+        message(WARNING "Brak wymaganych bibliotek (libasan/libubsan). Możesz je zainstalować: na Fedora przez: sudo yum install libasan libubsan")
+    endif()
+endif()
+
+# include-what-you-use (IWYU)
+find_program(IWYU_PATH NAMES include-what-you-use iwyu)
+
+if (IWYU_PATH)
+    message(STATUS "Znaleziono include-what-you-use: ${IWYU_PATH}")
+
+    # Przekieruj kompilację przez IWYU
+    set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE ${IWYU_PATH})
+
+    # Ustaw mapowanie IWYU (jeśli plik istnieje)
+    set(IWYU_MAPPING_FILE "${CMAKE_SOURCE_DIR}/${UNIT_TEST_DIRECTORY}/include-what-you-use_exceptions.imp")
+    if(EXISTS ${IWYU_MAPPING_FILE})
+        set(CMAKE_CXX_INCLUDE_WHAT_YOU_USE "${IWYU_PATH};-Xiwyu;--mapping_file=${IWYU_MAPPING_FILE}")
+        message(STATUS "Używany mapping IWYU: ${IWYU_MAPPING_FILE}")
+    else()
+        message(WARNING "Brak pliku mappingu IWYU: ${IWYU_MAPPING_FILE}")
+    endif()
+else()
+    message(WARNING "Nie znaleziono include-what-you-use. Możesz zainstalować")
+endif()
+
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # for cppcheck To generate compile_commands.json
 
@@ -111,5 +149,5 @@ if (CPPCHECK)
 endif()
 
 ############ dodanie podprojektów z testami:
-add_subdirectory(unit_tests)
+add_subdirectory(${UNIT_TEST_DIRECTORY})
 add_subdirectory(system_tests)

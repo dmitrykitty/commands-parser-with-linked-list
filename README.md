@@ -101,6 +101,16 @@ Te dwa aspekty się łączą w jedną całość, dlatego też jest to jedno zada
 5. **Sensowność paczki**: poza aspektem przećwiczenia dziedziczenia, rzutowania, polimorfizmu itd. nie ma sensu. Nie nadużywa się polimofrizmu w takich zastosowaniach!
 6. Osoby zaawansowane mogą się zapoznać z [std::any](https://en.cppreference.com/w/cpp/utility/any).
 
+____________________________________________________________________________________
+## Poruszane w paczce zagadnienia:
+1. Implementacja listy jednokierunkowej (umiejętność biegłego poruszania się po pamięci).
+2. Przenoszenie: konsttruktor przenoszący i przenoszący `operator=`.
+3. Dogłębne przejrzenie się sygnaturze metod `std::forward_list`.
+4. Rzutowania (zwłaszcza `dynamic_cast`, działające w trakcie wykonywania).
+5. Obsługa wejścia/wyjścia.
+6. Idea testów systemowych (całej aplikacji) jako uzupełnienie testów jednostkowych.
+____________________________________________________________________________________
+
 ## Częste problemy/błędy/FAQ:
 1. Jak sprawdzić czy nie ma już nic na standardowym wejściu?
 ```

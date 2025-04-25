@@ -2,6 +2,10 @@ project(unit_tests)
 
 # 'lib' is the folder with Google Test sources
 add_subdirectory(lib)
+# Disabling include-what-you-use for GTest
+set_target_properties(gtest PROPERTIES CXX_INCLUDE_WHAT_YOU_USE "")
+set_target_properties(gtest_main PROPERTIES CXX_INCLUDE_WHAT_YOU_USE "")
+
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 
