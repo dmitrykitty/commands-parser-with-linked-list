@@ -4,7 +4,7 @@ project(system_tests)
 set_target_properties(gtest PROPERTIES CXX_INCLUDE_WHAT_YOU_USE "")
 set_target_properties(gtest_main PROPERTIES CXX_INCLUDE_WHAT_YOU_USE "")
 
-option(SYSTEM_TESTS_WITH_BOOST "set ON to use boost otherwise use tiny process library" OFF)
+option(SYSTEM_TESTS_WITH_BOOST "set ON to use boost otherwise use tiny process library" ON)
 
 
 file(GLOB INPUT_OUTPUT_FILES inputOutputData/*.txt)
@@ -35,6 +35,7 @@ if(SYSTEM_TESTS_WITH_BOOST)
     target_include_directories(${PROJECT_NAME} PRIVATE ${BOOST_INCLUDE_DIRS})
     target_compile_definitions(${PROJECT_NAME} PRIVATE SYSTEM_TESTS_WITH_BOOST="${SYSTEM_TESTS_WITH_BOOST}")
     target_link_libraries(${PROJECT_NAME} PRIVATE gtest gtest_main)
+    message("Using Boost library (to run process)")
 else()
     add_subdirectory(./libs/tiny-process-library)
     set(BUILD_TESTING OFF)

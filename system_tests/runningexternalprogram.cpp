@@ -127,6 +127,11 @@ ProgramOutputs runCommandReturningOutput(const std::string &command,
         .linesOfStderr_ = text2Lines(allStderr),
     };
 
+    if (returnValue.exitCode_ < 0)
+    {
+        process.kill(true);
+    }
+
     return returnValue;
 }
 
@@ -149,9 +154,8 @@ void sendInput2Process(const std::string &inputText,
             process.write(line + '\n');
         }
     }
-    if (inputAvailable) {
-        process.close_stdin();
-    }
+
+    process.close_stdin();
 }
 
 int wait4ProcessReturningStatus(Process& process)
