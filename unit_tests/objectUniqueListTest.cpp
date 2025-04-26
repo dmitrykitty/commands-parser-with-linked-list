@@ -327,7 +327,7 @@ TEST_F(ObjectListTester, copyConstructorImplemented_expected2ListsWithTheSameEle
 {
     ObjectList myList;
 
-#ifndef UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
+#if ! defined(UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS) && ! defined(UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY)
     constexpr size_t objects2Add = 10;
 
     std::list<StringObject*> objects;
@@ -363,7 +363,7 @@ TEST_F(ObjectListTester, moveConstructorImplemented_expectedAllElementsMovedToOr
 
     constexpr size_t objects2Add = 10;
 
-#ifndef UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
+#if ! defined(UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS) && ! defined(UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY)
     std::list<StringObject*> objects;
     for (size_t i=1; i <= objects2Add; ++i)
     {
@@ -394,7 +394,7 @@ TEST_F(ObjectListTester, assignmentOperatorCopying_expectedNewValues)
 
     constexpr size_t objects2Add1 = 10, objects2Add2 = 3;
 
-#ifndef UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
+#if ! defined(UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS) && ! defined(UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY)
     std::list<StringObject*> objects1, objects2;
     for (size_t i=1; i <= objects2Add1; ++i)
     {
@@ -467,7 +467,7 @@ TEST_F(ObjectListTester, assignmentOperatorMoving_expectedAllElementsMoved)
 
     constexpr size_t objects2Add1 = 10, objects2Add2 = 3;
 
-#ifndef UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
+#if ! defined(UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS) && ! defined(UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY)
     std::list<StringObject*> objects1, objects2;
     for (size_t i=1; i <= objects2Add1; ++i)
     {
