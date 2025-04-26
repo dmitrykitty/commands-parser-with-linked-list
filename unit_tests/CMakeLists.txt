@@ -47,7 +47,7 @@ if (PERF_TOOL)
     add_custom_target(perf_stats_${PROJECT_NAME} DEPENDS ${PROJECT_NAME}
         COMMAND ${PERF_TOOL} stat
             -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,faults,task-clock,context-switches,cpu-migrations,page-faults
-            -- ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME} > /dev/null
+            -- ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME} 2>&1 > /dev/null
         COMMAND echo "======================"
         COMMAND echo "Program 'perf' to narzędzie do analizy wydajności działania programów."
         COMMAND echo "Podkomenda 'perf stat' mierzy podstawowe statystyki wydajności: ile operacji wykonał CPU, jak dobrze działała pamięć cache itd."
