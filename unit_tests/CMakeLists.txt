@@ -43,7 +43,7 @@ endif()
 ############ KOMENDA: make perf_stats_unit_tests
 find_program(PERF_TOOL NAMES perf)
 if (PERF_TOOL)
-    message("\t* perf found: ${PERF_TOOL}")
+    message("\t* perf found: ${PERF_TOOL}, so adding command: 'perf_stats_${PROJECT_NAME}'")
     add_custom_target(perf_stats_${PROJECT_NAME} DEPENDS ${PROJECT_NAME}
         COMMAND ${PERF_TOOL} stat
             -e cycles,instructions,cache-references,cache-misses,branches,branch-misses,faults,task-clock,context-switches,cpu-migrations,page-faults
