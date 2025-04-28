@@ -101,15 +101,21 @@ add_custom_target(run
     COMMAND ${PROJECT_NAME}
     DEPENDS ${PROJECT_NAME}
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+    COMMENT "Running the built executable (not tests)"
+    USES_TERMINAL
 )
 
 
-############ KOMENDA: make valgrind_${PROJECT_NAME}
+############ KOMENDA: make valgrind
 find_program(VALGRIND NAMES valgrind)
 if (VALGRIND)
     message("\t* valgrind found: ${VALGRIND}")
-    add_custom_target(valgrind_${PROJECT_NAME} DEPENDS ${PROJECT_NAME}
-        COMMAND ${VALGRIND} --leak-check=full ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/${PROJECT_NAME})
+    add_custom_target(valgrind DEPENDS ${PROJECT_NAME}
+        COMMAND ${VALGRIND} --leak-check=full ${PROJECT_BINARY_PATH}
+        WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
+        COMMENT "Running valgrind to check for memory leaks"
+        USES_TERMINAL
+    )
 endif()
 
 
@@ -118,35 +124,105 @@ find_program(DOXYGEN NAMES doxygen)
 if (DOXYGEN)
     message("\t* doxygen found: ${DOXYGEN}")
     add_custom_target(docs
-            COMMAND ${DOXYGEN} ${CMAKE_CURRENT_SOURCE_DIR} && make -C ${CMAKE_CURRENT_SOURCE_DIR}/latex && cp latex/refman.pdf ${CMAKE_CURRENT_BINARY_DIR}/trescWygenerowana.pdf
-            WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+        COMMAND ${DOXYGEN} ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMAND make -C ${CMAKE_CURRENT_SOURCE_DIR}/latex
+        COMMAND mv ${CMAKE_CURRENT_SOURCE_DIR}/latex/refman.pdf "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_coDoZrobienia.pdf"
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Generating documentation using Doxygen"
+        USES_TERMINAL
+    )
 endif()
 
 
 ############ KOMENDA: make zip
 get_filename_component(directoryBasename ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 add_custom_target(zip
-        COMMAND zip -r ${CMAKE_BINARY_DIR}/${directoryBasename}.zip ./
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+    COMMAND zip -r ${CMAKE_BINARY_DIR}/${directoryBasename}.zip . -x '*.git*' -x 'build/*'
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "Zipping the project directory into a .zip file"
+    USES_TERMINAL
+)
 
 
 ############ KOMENDA: make format
 #idealnym standardem dla C++ jest https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines, niestety nie jest on jeszcze wspierany przez narzędzie clang-format, dlatego używam innego popularnego stylu.
 add_custom_target(format
-        COMMAND clang-format -i -style=Google ${SOURCES})
+    COMMAND clang-format -i -style=Google ${SOURCES}
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "Formatting source files using clang-format (Google style)"
+    USES_TERMINAL
+)
 
 ############ KOMENDA: make ctags
 add_custom_target(ctags
-        COMMAND ctags -x --c++-types=f --extras --format=1 ${HEADERS} ${SOURCES_WITHOUT_MAIN})
+    COMMAND ctags -x --c++-types=f --extras --format=1 ${HEADERS} ${SOURCES_WITHOUT_MAIN}
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    COMMENT "Generating CTags for source and header files"
+    USES_TERMINAL
+)
 
 ############ KOMENDA: make cppcheck_${PROJECT_NAME}
 find_program(CPPCHECK NAMES cppcheck)
 if (CPPCHECK)
     message("\t* cppcheck found: ${CPPCHECK}")
     add_custom_target(cppcheck_${PROJECT_NAME} DEPENDS ${PROJECT_NAME}
-        COMMAND cppcheck --project=${CMAKE_BINARY_DIR}/compile_commands.json --force --enable=warning,performance,unusedFunction,style,information --template=gcc --inline-suppr --library=gnu.cfg --library=std.cfg --library=cppcheck-lib.cfg --library=motif.cfg --library=qt.cfg --library=windows.cfg --library=gnu.cfg --library=posix.cfg --library=avr.cfg --suppress=missingIncludeSystem -i ${HEADERS} ${SOURCES_WITHOUT_TESTS} -i ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMAND cppcheck --project=${CMAKE_BINARY_DIR}/compile_commands.json --force --enable=warning,performance,unusedFunction,style,information --template=gcc --inline-suppr --library=gnu.cfg --library=std.cfg --library=cppcheck-lib.cfg --library=motif.cfg --library=qt.cfg --library=windows.cfg --library=gnu.cfg --library=posix.cfg --library=avr.cfg --suppress=missingIncludeSystem -i ${HEADERS} ${SOURCES} -i ${CMAKE_CURRENT_SOURCE_DIR}
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR})
 endif()
+
+############ KOMENDA: make list_files
+if (NOT CMAKE_SYSTEM_NAME MATCHES "Windows")
+    # Przekształcenie listy plików w ciągi oddzielone spacjami
+    string(REPLACE ";" " " SOURCES_WITH_SPACES "${SOURCES}")
+    string(REPLACE ";" " " HEADERS_WITH_SPACES "${HEADERS}")
+
+    add_custom_target(list_files
+        COMMAND echo ${SOURCES_WITH_SPACES} ${HEADERS_WITH_SPACES}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Listing all source and header files"
+        VERBATIM
+    )
+endif()
+
+############ KOMENDA: make cpplint
+find_program(CPPLINT_TOOL NAMES cpplint)
+if (CPPLINT_TOOL)
+    message("\t+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: ${HEADERS} and ${SOURCES}")
+
+    add_custom_target(cpplint
+        COMMAND ${CPPLINT_TOOL} --filter=+whitespace/end_of_line,+whitespace/tab,-build,-readability,-runtime,-legal ${SOURCES} ${HEADERS}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Running cpplint to check for tabs and trailing whitespace"
+        USES_TERMINAL
+    )
+endif()
+
+############ KOMENDA: make clang_tidy
+find_program(CLANG_TIDY NAMES clang-tidy)
+if (CLANG_TIDY)
+    message("\t+ adding command found: `clang-tidy` to run static analysis on source files: ${SOURCES} and ${HEADERS}")
+
+    add_custom_target(clang_tidy DEPENDS ${PROJECT_NAME}
+        COMMAND ${CLANG_TIDY} -p="${CMAKE_CURRENT_BINARY_DIR}/compile_commands.json" ${SOURCES} ${HEADERS}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Running clang-tidy to perform static analysis on source files"
+        USES_TERMINAL
+    )
+endif()
+
+############ KOMENDA: make flawfinder
+find_program(FLAWFINDER_TOOL NAMES flawfinder)
+if (FLAWFINDER_TOOL)
+    message("\t+ adding command found: `flawfinder` to perform security analysis on files: ${SOURCES} and ${HEADERS}")
+
+    add_custom_target(flawfinder
+        COMMAND ${FLAWFINDER_TOOL} --quiet --dataonly --nolink --columns --context --singleline --minlevel=0 ${HEADERS} ${SOURCES}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        COMMENT "Running flawfinder to perform security analysis"
+        USES_TERMINAL
+    )
+endif()
+
 
 ############ dodanie podprojektów z testami:
 add_subdirectory(${UNIT_TEST_DIRECTORY})
