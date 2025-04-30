@@ -131,6 +131,7 @@ int main() {
 ```
 option(SYSTEM_TESTS_WITH_BOOST "set ON to use boost otherwise use tiny process library" OFF)
 ```
+   - **Ważne** aby po tej zmianie usunąć plik `CMakeCache.txt`, oraz przeładować konfiguracje CMake.
 3. Jak można sprawdzać czy obiekt już jest?
    - Można użyć funkcji hashującej i trzymać jej rezultat (liczbę) w zbiorze (`std::set`).
 4. Trudna ta paczka!
