@@ -134,7 +134,9 @@ option(SYSTEM_TESTS_WITH_BOOST "set ON to use boost otherwise use tiny process l
    - **Ważne** aby po tej zmianie usunąć plik `CMakeCache.txt`, oraz przeładować konfiguracje CMake.
 3. Jak można sprawdzać czy obiekt już jest?
    - Można użyć funkcji hashującej i trzymać jej rezultat (liczbę) w zbiorze (`std::set`).
-4. Trudna ta paczka!
+4. Z testów systemowych pojawia się komunikat sugerujący, że nie udało się uruchomić programu mojego autorstwa - jak żyć Panie Prowadzący?
+   - Proszę sprawdzić, czy ścieżka do katalogu ze skompilowanymi programami (zapewne program nazywa się `zad8CommandsParser`) nie zawiera SPACJI. Jeśli zawiera to spróbuj przenieść to w inne miejsce.
+5. Trudna ta paczka!
    - Tym razem chciałem, aby Państwo zrobili coś konkretnego - od początku do końca, a coś konkretnego często wymaga więcej kodu. Dlatego też jest więcej czasu.
 
 ## Ocenianie:
