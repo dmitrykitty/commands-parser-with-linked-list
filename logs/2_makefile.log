@@ -1,0 +1,76 @@
+[ 11%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 22%] Linking CXX static library ../../../lib/libgtest.a
+[ 22%] Built target gtest
+[ 33%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 44%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 44%] Built target gtest_main
+[ 55%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/objectlist.cpp.o
+[ 66%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/objectUniqueListTest.cpp.o
+[ 77%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.o
+[ 88%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.o
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp: In member function ‘virtual void ObjectListTester_moveConstructorImplemented_expectedAllElementsMovedToOrderContainer_Test::TestBody()’:
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp:364:22: warning: unused variable ‘objects2Add’ [-Wunused-variable]
+  364 |     constexpr size_t objects2Add = 10;
+      |                      ^~~~~~~~~~~
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp: In member function ‘virtual void ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody()’:
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp:395:22: warning: unused variable ‘objects2Add1’ [-Wunused-variable]
+  395 |     constexpr size_t objects2Add1 = 10, objects2Add2 = 3;
+      |                      ^~~~~~~~~~~~
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp:395:41: warning: unused variable ‘objects2Add2’ [-Wunused-variable]
+  395 |     constexpr size_t objects2Add1 = 10, objects2Add2 = 3;
+      |                                         ^~~~~~~~~~~~
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp: In member function ‘virtual void ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody()’:
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp:468:22: warning: unused variable ‘objects2Add1’ [-Wunused-variable]
+  468 |     constexpr size_t objects2Add1 = 10, objects2Add2 = 3;
+      |                      ^~~~~~~~~~~~
+/tmp/tmp9uf3fxcg/student/unit_tests/objectUniqueListTest.cpp:468:41: warning: unused variable ‘objects2Add2’ [-Wunused-variable]
+  468 |     constexpr size_t objects2Add1 = 10, objects2Add2 = 3;
+      |                                         ^~~~~~~~~~~~
+[100%] Linking CXX executable ../bin/unit_tests
+[100%] Built target unit_tests
+Consolidate compiler generated dependencies of target gtest
+[  8%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/object.cpp.o
+[ 16%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/objectlist.cpp.o
+[ 25%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/stringObject.cpp.o
+[ 33%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.o
+[ 50%] Built target gtest
+Consolidate compiler generated dependencies of target gtest_main
+[ 66%] Built target gtest_main
+/tmp/tmp9uf3fxcg/student/main.cpp: In function ‘void validateStudentsInfo()’:
+/tmp/tmp9uf3fxcg/student/main.cpp:51:48: error: static assertion failed: You must input your first name!
+   51 |     static_assert(compileTimeStrlen(FIRSTNAME) > 2, "You must input your first name!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp9uf3fxcg/student/main.cpp:51:48: note: the comparison reduces to ‘(0 > 2)’
+/tmp/tmp9uf3fxcg/student/main.cpp:52:46: error: static assertion failed: You must input your surname!
+   52 |     static_assert(compileTimeStrlen(SURNAME) > 2, "You must input your surname!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp9uf3fxcg/student/main.cpp:52:46: note: the comparison reduces to ‘(0 > 2)’
+/tmp/tmp9uf3fxcg/student/main.cpp:54:46: error: static assertion failed: You must input your student book id!
+   54 |     static_assert(compileTimeStrlen(BOOK_ID) > 1, "You must input your student book id!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp9uf3fxcg/student/main.cpp:54:46: note: the comparison reduces to ‘(0 > 1)’
+/tmp/tmp9uf3fxcg/student/main.cpp:57:43: error: static assertion failed: You must input your mail (preferred AGH mail)!
+   57 |     static_assert(compileTimeStrlen(MAIL) > 3, "You must input your mail (preferred AGH mail)!");
+      |                   ~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/tmp/tmp9uf3fxcg/student/main.cpp:57:43: note: the comparison reduces to ‘(0 > 3)’
+/tmp/tmp9uf3fxcg/student/main.cpp:58:38: error: non-constant condition for static assertion
+   58 |     static_assert(compileTimeContains(MAIL, '@'), "Invalid mail! It should contain '@'!");
+      |                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/tmp/tmp9uf3fxcg/student/main.cpp:58:38:   in ‘constexpr’ expansion of ‘compileTimeContains(((const char*)MAIL), 64)’
+/tmp/tmp9uf3fxcg/student/main.cpp:46:53:   in ‘constexpr’ expansion of ‘compileTimeContains((text + 1), ((int)letter))’
+/tmp/tmp9uf3fxcg/student/main.cpp:43:17: error: array subscript value ‘1’ is outside the bounds of array type ‘const char [1]’
+   43 |     if ('\n' == *text)
+      |                 ^~~~~
+/tmp/tmp9uf3fxcg/student/main.cpp:59:38: error: non-constant condition for static assertion
+   59 |     static_assert(compileTimeContains(MAIL, '.'), "Invalid mail! It should contain '.'!");
+      |                   ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/tmp/tmp9uf3fxcg/student/main.cpp:59:38:   in ‘constexpr’ expansion of ‘compileTimeContains(((const char*)MAIL), 46)’
+/tmp/tmp9uf3fxcg/student/main.cpp:46:53:   in ‘constexpr’ expansion of ‘compileTimeContains((text + 1), ((int)letter))’
+/tmp/tmp9uf3fxcg/student/main.cpp:43:17: error: array subscript value ‘1’ is outside the bounds of array type ‘const char [1]’
+   43 |     if ('\n' == *text)
+      |                 ^~~~~
+make[3]: *** [CMakeFiles/zad8CommandsParser_dlaStudentow.dir/build.make:76: CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/Makefile2:186: CMakeFiles/zad8CommandsParser_dlaStudentow.dir/all] Error 2
+make[1]: *** [CMakeFiles/Makefile2:717: system_tests/CMakeFiles/system_tests.dir/rule] Error 2
+make: *** [Makefile:429: system_tests] Error 2
