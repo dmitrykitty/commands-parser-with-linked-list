@@ -8,12 +8,12 @@
 //#define UNIMPLEMENTED_PUSH_FRONT
 //#define UNIMPLEMENTED_POP_FRONT
 //#define UNIMPLEMENTED_FRONT
-#define UNIMPLEMENTED_CLEAR
-#define UNIMPLEMENTED_REVERSE // rozmowa kwalifikacyjna
-#define UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY
-#define UNIMPLEMENTED_ITERATORS
-#define UNIMPLEMENTED_ERASE_AFTER
-#define UNIMPLEMENTED_ERASE
+//#define UNIMPLEMENTED_CLEAR
+//#define UNIMPLEMENTED_REVERSE // rozmowa kwalifikacyjna
+//#define UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY
+//#define UNIMPLEMENTED_ITERATORS
+//#define UNIMPLEMENTED_ERASE_AFTER
+//#define UNIMPLEMENTED_ERASE
 
 
 class Object;
@@ -88,7 +88,12 @@ public:
 
 
     ObjectList();
+    ObjectList(const ObjectList& other);
+    ObjectList(ObjectList&& other) noexcept ;
     ~ObjectList();
+
+    ObjectList& operator=(const ObjectList& other);
+    ObjectList& operator=(ObjectList&& other) noexcept ;
 
     void clear();
 
@@ -103,11 +108,12 @@ public:
      * Wpierw sprawdzamy czy obiekt już jest w liście
      */
     void push_front(value_type* newObject);
-
+    void push_back(value_type* newObject);
     [[nodiscard]] std::size_t size() const { return size_; }
     [[nodiscard]] bool empty() const { return size_ == 0; }
 
     void pop_front();
+    void pop_back();
 
     void erase_after(iterator position);
 
@@ -121,5 +127,6 @@ public:
     void sort() noexcept;
 
 protected:
-    bool contains(const value_type& obj) const;
+    [[nodiscard]] bool contains(const value_type& obj) const;
+    void swap(ObjectList& other) noexcept;
 };
