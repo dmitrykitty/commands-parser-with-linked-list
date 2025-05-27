@@ -23,4 +23,5 @@ void ObjectList::push_front(value_type* newObject) {
     auto currentHead = head;
     head = new Node(newObject);
     head->next = currentHead;
+    ++size_;
 }

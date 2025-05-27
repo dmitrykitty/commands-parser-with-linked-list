@@ -7,8 +7,7 @@
 class Object
 {
 public:
-    // TODO: ...
+    virtual ~Object() = default;
     virtual bool operator==(const Object& obj) const = 0;
-
     virtual Object* clone() const = 0;
 };

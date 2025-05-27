@@ -4,8 +4,8 @@
 #include <memory>    // std::unique_ptr (dla chętnych)
 #include <set>
 
-
-#define UNIMPLEMENTED_PUSH_FRONT
+//#define UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
+//#define UNIMPLEMENTED_PUSH_FRONT
 #define UNIMPLEMENTED_POP_FRONT
 #define UNIMPLEMENTED_FRONT
 #define UNIMPLEMENTED_CLEAR
@@ -57,7 +57,7 @@ public:
             return *this;
         }
 
-        iterator& operator++(int) {
+        iterator operator++(int) {
             auto tmp = *this;
             ++*this;
             return tmp;
