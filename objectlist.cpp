@@ -5,11 +5,11 @@
 #include "object.h"
 
 
-ObjectList::ObjectList() = default;
+ObjectList::ObjectList(): fakeNode{&fakeNode, &fakeNode}{}
 
 ObjectList::~ObjectList() = default;
 
-bool ObjectList::contains(const value_type& obj) {
+bool ObjectList::contains(const value_type& obj) const {
     for (const auto& o: *this)
         if (o == obj)
             return true;
@@ -20,18 +20,28 @@ void ObjectList::push_front(value_type* newObject) {
     if (contains(*newObject))
         return;
 
-    auto currentHead = head;
-    head = new Node(newObject);
-    head->next = currentHead;
+    if (!fakeNode.next) {
+        fakeNode.next = fakeNode.prev = new Node(newObject);
+    } else {
+        auto oldHead = fakeNode.next;
+        fakeNode.next = new Node(newObject);
+        fakeNode.next->next = oldHead;
+        oldHead->prev = fakeNode.next;
+    }
     ++size_;
 }
 
 void ObjectList::pop_front() {
-    if (!head)
+    if (!fakeNode.next)
         return;
 
-    auto newHead = head->next;
-    delete head;
-    head = newHead;
+    auto oldHead = fakeNode.next;
+    if (fakeNode.next == fakeNode.prev) {
+        fakeNode.next = fakeNode.prev = nullptr;
+    } else {
+        fakeNode.next = fakeNode.next->next;
+        fakeNode.next->prev = nullptr;
+    }
+    delete oldHead;
     --size_;
 }

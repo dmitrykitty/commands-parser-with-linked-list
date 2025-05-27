@@ -26,24 +26,29 @@ public:
 private:
     struct Node {
         Node* next{};
-        value_type* valueObject;
+        Node* prev{};
+        value_type* valueObject{};
 
         Node() = default;
-        explicit Node(value_type* obj): valueObject(obj){}
+        Node(Node* prev, Node* next): next(next), prev(prev){}
+        explicit Node(value_type* obj): valueObject(obj) {}
     };
 
-    Node* head{};
+    Node fakeNode;
     std::size_t size_{};
 
 public:
     struct iterator {
-        using iterator_category = std::forward_iterator_tag;
+        using iterator_category = std::bidirectional_iterator_tag; //dla listy dwukierunkowej,
+        //dla jednokierunkowej std::forward_iterator_tag
+
         using pointer = Object *;
         using reference = Object &;
         using value_type = Object;
         using difference_type = std::ptrdiff_t;
 
         Node* ptrNode{};
+        Node* tailPtr{}; //aby --end() dawał tail
 
         iterator() = default;
 
@@ -63,12 +68,23 @@ public:
             return tmp;
         }
 
+        iterator& operator--() {
+            ptrNode = ptrNode->prev;
+            return *this;
+        }
+
+        iterator operator--(int) {
+            auto tmp = *this;
+            --*this;
+            return tmp;
+        }
+
         bool operator==(const iterator& o) const { return ptrNode == o.ptrNode; }
         bool operator!=(const iterator& o) const { return ptrNode != o.ptrNode; }
     };
 
-    iterator begin() { return {head}; };
-    iterator end() { return {nullptr}; }
+    [[nodiscard]] iterator begin() const { return {fakeNode.next}; }
+    [[nodiscard]] iterator end() const { return {const_cast<Node *>(&fakeNode)}; }
 
 
     ObjectList();
@@ -78,7 +94,7 @@ public:
 
     void reverse() noexcept;
 
-    [[nodiscard]] value_type& front() const { return *head->valueObject; };
+    [[nodiscard]] value_type& front() const { return *fakeNode.next->valueObject; };
 
 
     /**
@@ -105,5 +121,5 @@ public:
     void sort() noexcept;
 
 protected:
-    bool contains(const value_type& obj);
+    bool contains(const value_type& obj) const;
 };
