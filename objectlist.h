@@ -27,6 +27,9 @@ private:
     struct Node {
         Node* next{};
         value_type* valueObject;
+
+        Node() = default;
+        explicit Node(value_type* obj): valueObject(obj){}
     };
 
     Node* head{};
@@ -69,7 +72,6 @@ public:
 
 
     ObjectList();
-
     ~ObjectList();
 
     void clear();
@@ -103,5 +105,5 @@ public:
     void sort() noexcept;
 
 protected:
-    // TODO: ...
+    bool contains(const value_type& obj);
 };
