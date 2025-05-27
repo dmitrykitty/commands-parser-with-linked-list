@@ -49,6 +49,24 @@ cmake_ninja_workdir = D$:/study/AGH/LAB_C_plus/LAB8/cmake-build-debug/
 
 build cmake_object_order_depends_target_zad8CommandsParser_dlaStudentow: phony || .
 
+build CMakeFiles/zad8CommandsParser_dlaStudentow.dir/complexObject.cpp.obj: CXX_COMPILER__zad8CommandsParser_dlaStudentow_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/complexObject.cpp || cmake_object_order_depends_target_zad8CommandsParser_dlaStudentow
+  DEP_FILE = CMakeFiles\zad8CommandsParser_dlaStudentow.dir\complexObject.cpp.obj.d
+  FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
+  OBJECT_FILE_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
+
+build CMakeFiles/zad8CommandsParser_dlaStudentow.dir/doubleObject.cpp.obj: CXX_COMPILER__zad8CommandsParser_dlaStudentow_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/doubleObject.cpp || cmake_object_order_depends_target_zad8CommandsParser_dlaStudentow
+  DEP_FILE = CMakeFiles\zad8CommandsParser_dlaStudentow.dir\doubleObject.cpp.obj.d
+  FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
+  OBJECT_FILE_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
+
+build CMakeFiles/zad8CommandsParser_dlaStudentow.dir/intObject.cpp.obj: CXX_COMPILER__zad8CommandsParser_dlaStudentow_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/intObject.cpp || cmake_object_order_depends_target_zad8CommandsParser_dlaStudentow
+  DEP_FILE = CMakeFiles\zad8CommandsParser_dlaStudentow.dir\intObject.cpp.obj.d
+  FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
+  OBJECT_FILE_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
+
 build CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.obj: CXX_COMPILER__zad8CommandsParser_dlaStudentow_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/main.cpp || cmake_object_order_depends_target_zad8CommandsParser_dlaStudentow
   DEP_FILE = CMakeFiles\zad8CommandsParser_dlaStudentow.dir\main.cpp.obj.d
   FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
@@ -81,7 +99,7 @@ build CMakeFiles/zad8CommandsParser_dlaStudentow.dir/stringObject.cpp.obj: CXX_C
 #############################################
 # Link the executable bin\zad8CommandsParser_dlaStudentow.exe
 
-build bin/zad8CommandsParser_dlaStudentow.exe: CXX_EXECUTABLE_LINKER__zad8CommandsParser_dlaStudentow_Debug CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/object.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/objectlist.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/stringObject.cpp.obj
+build bin/zad8CommandsParser_dlaStudentow.exe: CXX_EXECUTABLE_LINKER__zad8CommandsParser_dlaStudentow_Debug CMakeFiles/zad8CommandsParser_dlaStudentow.dir/complexObject.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/doubleObject.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/intObject.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/object.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/objectlist.cpp.obj CMakeFiles/zad8CommandsParser_dlaStudentow.dir/stringObject.cpp.obj
   FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\zad8CommandsParser_dlaStudentow.dir
@@ -203,7 +221,7 @@ build CMakeFiles/zip | ${cmake_ninja_workdir}CMakeFiles/zip: CUSTOM_COMMAND
 # Custom command for CMakeFiles\format
 
 build CMakeFiles/format | ${cmake_ninja_workdir}CMakeFiles/format: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\study\AGH\LAB_C_plus\LAB8 && clang-format -i -style=Google D:/study/AGH/LAB_C_plus/LAB8/main.cpp D:/study/AGH/LAB_C_plus/LAB8/object.cpp D:/study/AGH/LAB_C_plus/LAB8/objectlist.cpp D:/study/AGH/LAB_C_plus/LAB8/stringObject.cpp"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\study\AGH\LAB_C_plus\LAB8 && clang-format -i -style=Google D:/study/AGH/LAB_C_plus/LAB8/complexObject.cpp D:/study/AGH/LAB_C_plus/LAB8/doubleObject.cpp D:/study/AGH/LAB_C_plus/LAB8/intObject.cpp D:/study/AGH/LAB_C_plus/LAB8/main.cpp D:/study/AGH/LAB_C_plus/LAB8/object.cpp D:/study/AGH/LAB_C_plus/LAB8/objectlist.cpp D:/study/AGH/LAB_C_plus/LAB8/stringObject.cpp"
   DESC = Formatting source files using clang-format (Google style)
   pool = console
 
@@ -212,7 +230,7 @@ build CMakeFiles/format | ${cmake_ninja_workdir}CMakeFiles/format: CUSTOM_COMMAN
 # Custom command for CMakeFiles\ctags
 
 build CMakeFiles/ctags | ${cmake_ninja_workdir}CMakeFiles/ctags: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\study\AGH\LAB_C_plus\LAB8 && ctags -x --c++-types=f --extras --format=1 D:/study/AGH/LAB_C_plus/LAB8/node.h D:/study/AGH/LAB_C_plus/LAB8/object.h D:/study/AGH/LAB_C_plus/LAB8/objectlist.h D:/study/AGH/LAB_C_plus/LAB8/stringObject.h D:/study/AGH/LAB_C_plus/LAB8/object.cpp D:/study/AGH/LAB_C_plus/LAB8/objectlist.cpp D:/study/AGH/LAB_C_plus/LAB8/stringObject.cpp"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\study\AGH\LAB_C_plus\LAB8 && ctags -x --c++-types=f --extras --format=1 D:/study/AGH/LAB_C_plus/LAB8/complexObject.h D:/study/AGH/LAB_C_plus/LAB8/doubleObject.h D:/study/AGH/LAB_C_plus/LAB8/intObject.h D:/study/AGH/LAB_C_plus/LAB8/object.h D:/study/AGH/LAB_C_plus/LAB8/objectlist.h D:/study/AGH/LAB_C_plus/LAB8/stringObject.h D:/study/AGH/LAB_C_plus/LAB8/complexObject.cpp D:/study/AGH/LAB_C_plus/LAB8/doubleObject.cpp D:/study/AGH/LAB_C_plus/LAB8/intObject.cpp D:/study/AGH/LAB_C_plus/LAB8/object.cpp D:/study/AGH/LAB_C_plus/LAB8/objectlist.cpp D:/study/AGH/LAB_C_plus/LAB8/stringObject.cpp"
   DESC = Generating CTags for source and header files
   pool = console
 
@@ -236,6 +254,27 @@ build unit_tests/CMakeFiles/unit_tests.dir/objectUniqueListTest.cpp.obj: CXX_COM
   INCLUDES = -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest/include -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest
   OBJECT_DIR = unit_tests\CMakeFiles\unit_tests.dir
   OBJECT_FILE_DIR = unit_tests\CMakeFiles\unit_tests.dir
+
+build unit_tests/CMakeFiles/unit_tests.dir/__/complexObject.cpp.obj: CXX_COMPILER__unit_tests_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/complexObject.cpp || cmake_object_order_depends_target_unit_tests
+  DEP_FILE = unit_tests\CMakeFiles\unit_tests.dir\__\complexObject.cpp.obj.d
+  FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest/include -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest
+  OBJECT_DIR = unit_tests\CMakeFiles\unit_tests.dir
+  OBJECT_FILE_DIR = unit_tests\CMakeFiles\unit_tests.dir\__
+
+build unit_tests/CMakeFiles/unit_tests.dir/__/doubleObject.cpp.obj: CXX_COMPILER__unit_tests_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/doubleObject.cpp || cmake_object_order_depends_target_unit_tests
+  DEP_FILE = unit_tests\CMakeFiles\unit_tests.dir\__\doubleObject.cpp.obj.d
+  FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest/include -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest
+  OBJECT_DIR = unit_tests\CMakeFiles\unit_tests.dir
+  OBJECT_FILE_DIR = unit_tests\CMakeFiles\unit_tests.dir\__
+
+build unit_tests/CMakeFiles/unit_tests.dir/__/intObject.cpp.obj: CXX_COMPILER__unit_tests_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/intObject.cpp || cmake_object_order_depends_target_unit_tests
+  DEP_FILE = unit_tests\CMakeFiles\unit_tests.dir\__\intObject.cpp.obj.d
+  FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g -std=c++23 -fdiagnostics-color=always
+  INCLUDES = -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest/include -isystem D:/study/AGH/LAB_C_plus/LAB8/unit_tests/lib/googletest
+  OBJECT_DIR = unit_tests\CMakeFiles\unit_tests.dir
+  OBJECT_FILE_DIR = unit_tests\CMakeFiles\unit_tests.dir\__
 
 build unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.obj: CXX_COMPILER__unit_tests_unscanned_Debug D$:/study/AGH/LAB_C_plus/LAB8/object.cpp || cmake_object_order_depends_target_unit_tests
   DEP_FILE = unit_tests\CMakeFiles\unit_tests.dir\__\object.cpp.obj.d
@@ -266,7 +305,7 @@ build unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.obj: CXX_COMPILER
 #############################################
 # Link the executable bin\unit_tests.exe
 
-build bin/unit_tests.exe: CXX_EXECUTABLE_LINKER__unit_tests_Debug unit_tests/CMakeFiles/unit_tests.dir/objectUniqueListTest.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/objectlist.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+build bin/unit_tests.exe: CXX_EXECUTABLE_LINKER__unit_tests_Debug unit_tests/CMakeFiles/unit_tests.dir/objectUniqueListTest.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/complexObject.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/doubleObject.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/intObject.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/objectlist.cpp.obj unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = --std=c++23 -Wall -Wextra -pedantic -Wno-error=deprecated-declarations -g
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = unit_tests\CMakeFiles\unit_tests.dir

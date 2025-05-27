@@ -6,6 +6,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED OFF)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(UNIT_TEST_DIRECTORY "unit_tests")
 
+#find_package(Boost REQUIRED COMPONENTS filesystem system)
+#target_link_libraries(system_tests
+#        PRIVATE
+#        Boost::filesystem
+#        Boost::system
+#        # ...inne biblioteki, np. gtest, gtest_main...
+#)
+
 if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     include(CheckCXXCompilerFlag)
     CHECK_CXX_COMPILER_FLAG("/std:c++latest" _cpp_latest_flag_supported)
@@ -93,7 +101,10 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
    add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 else()
    add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES}
-           node.h)
+           node.h
+           intobject.h
+           doubleobject.h
+           complexobject.h)
 endif()
 
 
