@@ -25,3 +25,13 @@ void ObjectList::push_front(value_type* newObject) {
     head->next = currentHead;
     ++size_;
 }
+
+void ObjectList::pop_front() {
+    if (!head)
+        return;
+
+    auto newHead = head->next;
+    delete head;
+    head = newHead;
+    --size_;
+}

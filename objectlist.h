@@ -6,8 +6,8 @@
 
 //#define UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
 //#define UNIMPLEMENTED_PUSH_FRONT
-#define UNIMPLEMENTED_POP_FRONT
-#define UNIMPLEMENTED_FRONT
+//#define UNIMPLEMENTED_POP_FRONT
+//#define UNIMPLEMENTED_FRONT
 #define UNIMPLEMENTED_CLEAR
 #define UNIMPLEMENTED_REVERSE // rozmowa kwalifikacyjna
 #define UNIMPLEMENTED_ITERATOR_METHODS_AT_LEAST_EMPTY
@@ -78,7 +78,7 @@ public:
 
     void reverse() noexcept;
 
-    value_type& front();
+    [[nodiscard]] value_type& front() const { return *head->valueObject; };
 
 
     /**
