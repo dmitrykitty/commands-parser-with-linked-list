@@ -27,7 +27,7 @@ std::pair<std::string, std::string> getPairOfIOTestFilesForBasename(const std::s
 
     if (std::filesystem::exists(inputFilePath) && std::filesystem::exists(outputFilePath))
     {
-        return {inputFilePath, outputFilePath};
+        return {inputFilePath.string(), outputFilePath.string()};
     }
     throw std::runtime_error("!Files '" + inputFilePath.string() + "', or '" + outputFilePath.string() + "' do not exist!");
 }

@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(zad8CommandsParser_dlaStudentow)
 
 set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD_REQUIRED OFF)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(UNIT_TEST_DIRECTORY "unit_tests")
 
@@ -92,7 +92,8 @@ message(" + Znaleziono źródła bez main.cpp: ${SOURCES_WITHOUT_MAIN}")
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
    add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 else()
-   add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
+   add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES}
+           node.h)
 endif()
 
 

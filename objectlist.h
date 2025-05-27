@@ -5,7 +5,6 @@
 #include <set>
 
 
-#define UNIMPLEMENTED_OBJECT_LIST_CONSTRUCTOR_SIZE_EMPTY_METHODS
 #define UNIMPLEMENTED_PUSH_FRONT
 #define UNIMPLEMENTED_POP_FRONT
 #define UNIMPLEMENTED_FRONT
@@ -20,14 +19,57 @@
 class Object;
 
 
-class ObjectList
-{
-    struct Node;
-
+class ObjectList {
 public:
     using value_type = Object;
 
+private:
+    struct Node {
+        Node* next{};
+        value_type* valueObject;
+    };
+
+    Node* head{};
+    std::size_t size_{};
+
+public:
+    struct iterator {
+        using iterator_category = std::forward_iterator_tag;
+        using pointer = Object *;
+        using reference = Object &;
+        using value_type = Object;
+        using difference_type = std::ptrdiff_t;
+
+        Node* ptrNode{};
+
+        iterator() = default;
+
+        iterator(Node* ptr): ptrNode(ptr) {}
+
+        reference operator*() const { return *ptrNode->valueObject; }
+        pointer operator->() const { return ptrNode->valueObject; }
+
+        iterator& operator++() {
+            ptrNode = ptrNode->next;
+            return *this;
+        }
+
+        iterator& operator++(int) {
+            auto tmp = *this;
+            ++*this;
+            return tmp;
+        }
+
+        bool operator==(const iterator& o) const { return ptrNode == o.ptrNode; }
+        bool operator!=(const iterator& o) const { return ptrNode != o.ptrNode; }
+    };
+
+    iterator begin() { return {head}; };
+    iterator end() { return {nullptr}; }
+
+
     ObjectList();
+
     ~ObjectList();
 
     void clear();
@@ -37,23 +79,15 @@ public:
     value_type& front();
 
 
-    struct iterator
-    {
-        // TODO: ...
-    };
-
-    iterator begin();
-    iterator end()
-    {
-        return {};
-    }
-
     /**
      * @brief push_front
      * @param newObject
      * Wpierw sprawdzamy czy obiekt już jest w liście
      */
     void push_front(value_type* newObject);
+
+    [[nodiscard]] std::size_t size() const { return size_; }
+    [[nodiscard]] bool empty() const { return size_ == 0; }
 
     void pop_front();
 

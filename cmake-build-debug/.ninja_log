@@ -1,0 +1,5 @@
+# ninja log v6
+19	1037	7700530719725833	unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.obj	df4f4482bca53501
+32	1044	7700530719853277	unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.obj	d4a5c2cd909b580b
+8	2885	7700530719615090	unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj	d0814f2810cdd923
+3	10683	7700530719564216	unit_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj	cee553941018a676
