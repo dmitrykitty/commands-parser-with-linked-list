@@ -1,0 +1,106 @@
+make: Entering directory '/tmp/tmpuqn3v2gn/student/build'
+make[1]: Entering directory '/tmp/tmpuqn3v2gn/student/build'
+make[2]: Entering directory '/tmp/tmpuqn3v2gn/student/build'
+make[3]: Entering directory '/tmp/tmpuqn3v2gn/student/build'
+Consolidate compiler generated dependencies of target zad8CommandsParser_dlaStudentow
+make[3]: Leaving directory '/tmp/tmpuqn3v2gn/student/build'
+[ 88%] Built target zad8CommandsParser_dlaStudentow
+make[3]: Entering directory '/tmp/tmpuqn3v2gn/student/build'
+make[3]: Leaving directory '/tmp/tmpuqn3v2gn/student/build'
+make[3]: Entering directory '/tmp/tmpuqn3v2gn/student/build'
+[100%] Running clang-tidy to perform static analysis on source files
+2 warnings and 1 error generated.
+Error while processing /tmp/tmpuqn3v2gn/student/complexObject.cpp.
+4 warnings and 2 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/complexObject.cpp.
+6 warnings and 3 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/doubleObject.cpp.
+8 warnings and 4 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/doubleObject.cpp.
+10 warnings and 5 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/intObject.cpp.
+12 warnings and 6 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/intObject.cpp.
+23 warnings and 7 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/main.cpp.
+24 warnings and 8 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/object.cpp.
+25 warnings and 9 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/object.cpp.
+32 warnings and 10 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/objectlist.cpp.
+39 warnings and 11 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/objectlist.cpp.
+41 warnings and 12 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/stringObject.cpp.
+43 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/stringObject.cpp.
+45 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/complexObject.h.
+47 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/doubleObject.h.
+49 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/intObject.h.
+50 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/object.h.
+56 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/objectlist.h.
+58 warnings and 13 errors generated.
+Error while processing /tmp/tmpuqn3v2gn/student/stringObject.h.
+error: invalid value 'c++23' in '-std=c++23' [clang-diagnostic-error]
+note: use 'c++98' or 'c++03' for 'ISO C++ 1998 with amendments' standard
+note: use 'gnu++98' or 'gnu++03' for 'ISO C++ 1998 with amendments and GNU extensions' standard
+note: use 'c++11' for 'ISO C++ 2011 with amendments' standard
+note: use 'gnu++11' for 'ISO C++ 2011 with amendments and GNU extensions' standard
+note: use 'c++14' for 'ISO C++ 2014 with amendments' standard
+note: use 'gnu++14' for 'ISO C++ 2014 with amendments and GNU extensions' standard
+note: use 'c++17' for 'ISO C++ 2017 with amendments' standard
+note: use 'gnu++17' for 'ISO C++ 2017 with amendments and GNU extensions' standard
+note: use 'c++20' for 'ISO C++ 2020 DIS' standard
+note: use 'gnu++20' for 'ISO C++ 2020 DIS with GNU extensions' standard
+note: use 'c++2b' for 'Working draft for ISO C++ 2023 DIS' standard
+note: use 'gnu++2b' for 'Working draft for ISO C++ 2023 DIS with GNU extensions' standard
+/tmp/tmpuqn3v2gn/student/complexObject.h:18:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] Object* clone() const override { return new ComplexObject(*this); }
+      ^
+/tmp/tmpuqn3v2gn/student/doubleObject.h:12:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] Object* clone() const override { return new DoubleObject(*this); }
+      ^
+/tmp/tmpuqn3v2gn/student/intObject.h:16:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] Object* clone() const override { return new IntObject(*this); }
+      ^
+/tmp/tmpuqn3v2gn/student/object.h:12:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] virtual Object* clone() const = 0;
+      ^
+/tmp/tmpuqn3v2gn/student/objectlist.h:86:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] iterator begin() const { return {fakeNode.next}; }
+      ^
+/tmp/tmpuqn3v2gn/student/objectlist.h:87:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] iterator end() const { return {const_cast<Node *>(&fakeNode)}; }
+      ^
+/tmp/tmpuqn3v2gn/student/objectlist.h:102:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] value_type& front() const { return *fakeNode.next->valueObject; };
+      ^
+/tmp/tmpuqn3v2gn/student/objectlist.h:112:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] std::size_t size() const { return size_; }
+      ^
+/tmp/tmpuqn3v2gn/student/objectlist.h:113:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] bool empty() const { return size_ == 0; }
+      ^
+/tmp/tmpuqn3v2gn/student/objectlist.h:130:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] bool contains(const value_type& obj) const;
+      ^
+/tmp/tmpuqn3v2gn/student/stringObject.h:17:7: warning: use of the 'nodiscard' attribute is a C++17 extension [clang-diagnostic-c++17-attribute-extensions]
+    [[nodiscard]] Object* clone() const override { return new StringObject(*this); }
+      ^
+Suppressed 47 warnings (47 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.
+Found compiler error(s).
+make[3]: *** [CMakeFiles/clang_tidy.dir/build.make:71: CMakeFiles/clang_tidy] Error 1
+make[3]: Leaving directory '/tmp/tmpuqn3v2gn/student/build'
+make[2]: *** [CMakeFiles/Makefile2:420: CMakeFiles/clang_tidy.dir/all] Error 2
+make[2]: Leaving directory '/tmp/tmpuqn3v2gn/student/build'
+make[1]: *** [CMakeFiles/Makefile2:427: CMakeFiles/clang_tidy.dir/rule] Error 2
+make[1]: Leaving directory '/tmp/tmpuqn3v2gn/student/build'
+make: *** [Makefile:286: clang_tidy] Error 2
+make: Leaving directory '/tmp/tmpuqn3v2gn/student/build'

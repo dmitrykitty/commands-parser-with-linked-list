@@ -1,0 +1,172 @@
+{
+  "tests": 15,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2025-05-27T19:08:52Z",
+  "time": "0.004s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ObjectListTester",
+      "tests": 15,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2025-05-27T19:08:52Z",
+      "time": "0.003s",
+      "testsuite": [
+        {
+          "name": "constructionWithDefaultConstructor_expectedAllElementsAreZero",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 23,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "pushFrontOfElements_expectedSizeIncreases",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 35,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "pushFrontOfDuplicatedElements_expectedSizeIncreasesOnlyWhenUniqueElementAdded",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 55,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "popFrontOfElements_expectedSizeDecreases",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 80,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "frontOfLists_expectedCorrectFirstElementReturned",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 105,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "clear_expectedAllElementsRemoved",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 136,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "reverse_expectedAllElementsReversed",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 168,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "iteratorMethodsSyntaxCorrect_expectedChecksPasses",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 197,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "loopingWithIterators_expectedSuccess",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 221,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "eraseAfterMiddleElement_expectedMiddleElementErased",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 248,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "eraseMiddleElement_expectedMiddleElementErased",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 287,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "copyConstructorImplemented_expected2ListsWithTheSameElementsInTheSameOrder",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 326,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "moveConstructorImplemented_expectedAllElementsMovedToOrderContainer",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 360,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "assignmentOperatorCopying_expectedNewValues",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 391,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        },
+        {
+          "name": "assignmentOperatorMoving_expectedAllElementsMoved",
+          "file": "\/tmp\/tmpuqn3v2gn\/student\/unit_tests\/objectUniqueListTest.cpp",
+          "line": 464,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2025-05-27T19:08:52Z",
+          "time": "0s",
+          "classname": "ObjectListTester"
+        }
+      ]
+    }
+  ]
+}
