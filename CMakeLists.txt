@@ -1,18 +1,29 @@
 cmake_minimum_required(VERSION 3.19)
 project(zad8CommandsParser_dlaStudentow)
 
+# Włączamy obsługę Boost_ROOT zamiast starego BOOST_ROOT
+cmake_policy(SET CMP0074 NEW)
+# Przywracamy moduł FindBoost (nowsze CMake domyślnie go wycinają)
+cmake_policy(SET CMP0167 OLD)
+
+# Wskażemy, gdzie leży ta dostarczona z testami wersja Boost 1.81
+# (to katalog, w którym masz /boost i podfoldery stage/lib czy lib)
+set(Boost_ROOT        "${CMAKE_SOURCE_DIR}/system_tests/libs/boost_1_81")
+set(Boost_INCLUDEDIR  "${Boost_ROOT}")
+set(Boost_LIBRARYDIR  "${Boost_ROOT}/stage/lib")  # lub lib, zależy od struktury
+
+# Teraz znajdź Boost 1.81 z COMPONENTS filesystem i system
+find_package(Boost 1.81 REQUIRED COMPONENTS filesystem system)
+
+if (NOT Boost_FOUND)
+    message(FATAL_ERROR "Nie udało się znaleźć Boost w ${Boost_ROOT}")
+endif()
+
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED OFF)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(UNIT_TEST_DIRECTORY "unit_tests")
 
-#find_package(Boost REQUIRED COMPONENTS filesystem system)
-#target_link_libraries(system_tests
-#        PRIVATE
-#        Boost::filesystem
-#        Boost::system
-#        # ...inne biblioteki, np. gtest, gtest_main...
-#)
 
 if (CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     include(CheckCXXCompilerFlag)

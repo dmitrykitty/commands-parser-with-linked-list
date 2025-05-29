@@ -3,10 +3,10 @@
 
 class DoubleObject: public Object {
 public:
-    int doubleNum;
+    double doubleNum;
 
 
-    DoubleObject(int dn): doubleNum(dn){}
+    DoubleObject(double dn): doubleNum(dn){}
     bool operator==(const Object& obj) const override;
 
     [[nodiscard]] Object* clone() const override { return new DoubleObject(*this); }

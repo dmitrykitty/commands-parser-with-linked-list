@@ -11,8 +11,8 @@ file(GLOB INPUT_OUTPUT_FILES inputOutputData/*.txt)
 message(" + Znaleziono pliki wejścia/wyjścia do testów: ${INPUT_OUTPUT_FILES}")
 
 add_executable(${PROJECT_NAME} executableTests.cpp
-    runningexternalprogram.h runningexternalprogram.cpp
-    ${INPUT_OUTPUT_FILES})
+        runningexternalprogram.h runningexternalprogram.cpp
+        ${INPUT_OUTPUT_FILES})
 add_dependencies(${PROJECT_NAME} ${MAIN_PROJECT_NAME})
 
 
@@ -24,10 +24,10 @@ if(SYSTEM_TESTS_WITH_BOOST)
     set(Boost_NO_SYSTEM_PATHS TRUE)
 
     if (Boost_NO_SYSTEM_PATHS)
-      set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/libs/boost_1_81/")
-      set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}")
-      message("Using Boost: ${BOOST_INCLUDE_DIRS}")
-      set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
+        set(BOOST_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/libs/boost_1_81/")
+        set(BOOST_INCLUDE_DIRS "${BOOST_ROOT}")
+        message("Using Boost: ${BOOST_INCLUDE_DIRS}")
+        set(BOOST_LIBRARY_DIRS "${BOOST_ROOT}/lib")
     else()
         find_package(Boost REQUIRED) # header only libraries must not be added here
     endif (Boost_NO_SYSTEM_PATHS)
@@ -50,7 +50,8 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE CMAKE_CURRENT_SOURCE_DIR="${C
 
 ############ KOMENDA: make run_system_tests
 add_custom_target(run_${PROJECT_NAME}
-    COMMAND ${PROJECT_NAME}
-    DEPENDS ${PROJECT_NAME}
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+        COMMAND ${PROJECT_NAME}
+        DEPENDS ${PROJECT_NAME}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
+
