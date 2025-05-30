@@ -10,13 +10,32 @@
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
-CMake Error at /usr/share/cmake-3.22/Modules/FindBoost.cmake:855 (message):
-  ERROR: Boost_INCLUDEDIR is not the correct spelling.  The proper spelling
-  is BOOST_INCLUDEDIR.
+CMake Warning at /usr/share/cmake-3.22/Modules/FindBoost.cmake:1369 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
 Call Stack (most recent call first):
-  /usr/share/cmake-3.22/Modules/FindBoost.cmake:1686 (_Boost_CHECK_SPELLING)
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:1492 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:2102 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:16 (find_package)
+
+
+CMake Warning at /usr/share/cmake-3.22/Modules/FindBoost.cmake:1369 (message):
+  New Boost version may have incorrect or missing dependencies and imported
+  targets
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:1492 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:2102 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:16 (find_package)
+
+
+CMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
+  Could NOT find Boost (missing: filesystem system) (found suitable version
+  "1.82.0", minimum required is "1.81")
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:2360 (find_package_handle_standard_args)
   CMakeLists.txt:16 (find_package)
 
 
 -- Configuring incomplete, errors occurred!
-See also "/tmp/tmp81kffwah/student/build/CMakeFiles/CMakeOutput.log".
+See also "/tmp/tmp_ubeldee/student/build/CMakeFiles/CMakeOutput.log".
