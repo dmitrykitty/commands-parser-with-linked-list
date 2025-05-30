@@ -256,14 +256,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ctags::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ctags-Debug-0f46fdf13812543b0964.json",
+					"jsonFile" : "target-ctags-Debug-e8b64983d99a2969bd17.json",
 					"name" : "ctags",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "format::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-format-Debug-61864b741a1f17f53a09.json",
+					"jsonFile" : "target-format-Debug-7e10f155b5d26395879a.json",
 					"name" : "format",
 					"projectIndex" : 0
 				},
@@ -298,7 +298,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "run::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-run-Debug-0c28cb0e627620cbfbf1.json",
+					"jsonFile" : "target-run-Debug-d5956bfba08120f750fd.json",
 					"name" : "run",
 					"projectIndex" : 0
 				},
@@ -319,7 +319,7 @@
 				{
 					"directoryIndex" : 5,
 					"id" : "system_tests::@3ac55570f49394f448a8",
-					"jsonFile" : "target-system_tests-Debug-af12069ac147f20545c6.json",
+					"jsonFile" : "target-system_tests-Debug-21258b2c078735d17447.json",
 					"name" : "system_tests",
 					"projectIndex" : 5
 				},
@@ -333,21 +333,21 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "unit_tests::@2bb15649ce016d6c8322",
-					"jsonFile" : "target-unit_tests-Debug-25581431594b0e61430a.json",
+					"jsonFile" : "target-unit_tests-Debug-60cd62ea5a5631d9c15a.json",
 					"name" : "unit_tests",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "zad8CommandsParser_dlaStudentow::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-zad8CommandsParser_dlaStudentow-Debug-ec1c7474e01bf55d1043.json",
+					"jsonFile" : "target-zad8CommandsParser_dlaStudentow-Debug-5ea1beb3fe5d2d373abd.json",
 					"name" : "zad8CommandsParser_dlaStudentow",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "zip::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-zip-Debug-2020861e01969cc2d3f1.json",
+					"jsonFile" : "target-zip-Debug-0573ce6e1c997f338b7a.json",
 					"name" : "zip",
 					"projectIndex" : 0
 				}

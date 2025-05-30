@@ -18,13 +18,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 180,
+				"line" : 152,
 				"parent" : 0
 			}
 		]
 	},
-	"id" : "ctags::@6890427a1f51a3e7e1df",
-	"name" : "ctags",
+	"id" : "format::@6890427a1f51a3e7e1df",
+	"name" : "format",
 	"paths" : 
 	{
 		"build" : ".",
@@ -52,13 +52,13 @@
 		{
 			"backtrace" : 1,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/ctags",
+			"path" : "cmake-build-debug/CMakeFiles/format",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "cmake-build-debug/CMakeFiles/ctags.rule",
+			"path" : "cmake-build-debug/CMakeFiles/format.rule",
 			"sourceGroupIndex" : 1
 		}
 	],
