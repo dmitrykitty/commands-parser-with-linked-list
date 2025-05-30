@@ -16,8 +16,6 @@ public:
 
     [[nodiscard]] Object* clone() const override { return new StringObject(*this); }
     std::ostream& print(std::ostream& os) const override;
-    void multiply(int) override {
-        // no-op or error?
-    }
+    void multiply(int) override;
 };
 

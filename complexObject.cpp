@@ -11,6 +11,14 @@ bool ComplexObject::operator==(const Object& obj) const {
 }
 
 std::ostream& ComplexObject::print(std::ostream& os) const {
-    os << "ComplexObject(\"" << complex.real() << " + " << complex.imag() << "i" << "\")";
+    int re = complex.real();
+    int im = complex.imag();
+    os << "ComplexObject(" << re;
+    if (im != 0) {
+        if (im > 0)
+            os << '+'; // znak plus tylko gdy urojona ≥ 0
+        os << im << "i";
+    }
+    os << ")";
     return os;
 }

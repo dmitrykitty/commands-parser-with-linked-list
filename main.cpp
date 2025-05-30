@@ -4,6 +4,8 @@
 #include <complex>
 #include <stdexcept>
 #include <cctype>
+#include <fcntl.h>
+
 #include "objectlist.h"
 #include "object.h"
 #include "complexObject.h"
@@ -23,28 +25,42 @@ void validateStudentsInfo();
 
 
 int main() {
+#ifdef _WIN32
+    _setmode(_fileno(stdin), _O_BINARY);
+    _setmode(_fileno(stdout), _O_BINARY);
+#endif
+
     validateStudentsInfo();
 
     ObjectList list;
     std::string line;
     while (std::getline(std::cin, line)) {
+        // 1) usuń końcowy '\r' jeśli jest (Windowsowe CRLF)
+        if (!line.empty() && line.back() == '\r')
+            line.pop_back();
+        // 2) pomiń puste
         if (line.empty()) continue;
+
         std::istringstream iss(line);
         std::string cmd;
         iss >> cmd;
+
         if (cmd == "add") {
-            std::string arg;
-            if (!(iss >> arg)) {
-                std::cerr << "Error: missing argument\n";
-                continue;
-            }
-            auto pos = arg.find(':');
-            if (pos == std::string::npos) {
+            // znajdź pierwszy ':' w oryginalnej linii
+            auto colonPos = line.find(':');
+            if (colonPos == std::string::npos) {
                 std::cerr << "Error: bad add format\n";
                 continue;
             }
-            std::string type = arg.substr(0, pos);
-            std::string val = arg.substr(pos + 1);
+            // typ = wszystko między "add " a dwukropkiem
+            std::string type = line.substr(4, colonPos - 4);
+            // val = reszta po dwukropku, obetnij początek i koniec
+            std::string val = line.substr(colonPos + 1);
+            // usuń wiodące spacje
+            val.erase(0, val.find_first_not_of(' '));
+            // usuń końcowe spacje
+            val.erase(val.find_last_not_of(' ') + 1);
+
             try {
                 if (type == "IntObject") {
                     int v = std::stoi(val);
@@ -53,14 +69,40 @@ int main() {
                     double d = std::stod(val);
                     list.push_back(new DoubleObject(d));
                 } else if (type == "ComplexObject") {
-                    // format re+imi
-                    auto plus = val.find('+');
-                    auto i = val.find('i', plus);
-                    if (plus == std::string::npos || i == std::string::npos) {
-                        throw std::runtime_error("bad complex");
+                    int re = 0, im = 0;
+
+                    const std::size_t iPos = val.find('i');
+                    if (iPos == std::string::npos) {
+                        // brak 'i'  → czysta część rzeczywista
+                        re = std::stoi(val);
+                        im = 0;
+                    } else {
+                        std::string beforeI = val.substr(0, iPos); // wszystko przed 'i'
+
+                        // szukamy ostatniego '+' lub '-' (-> oddziela re i im),
+                        // pomijamy znak na pozycji 0, bo to leading sign realnej części
+                        std::size_t signPos = std::string::npos;
+                        for (std::size_t k = 1; k < beforeI.size(); ++k)
+                            if (beforeI[k] == '+' || beforeI[k] == '-')
+                                signPos = k;
+
+                        if (signPos == std::string::npos) {
+                            // brak separatora → tylko część urojona
+                            re = 0;
+                            const std::string& imagStr = beforeI; // może "", "+", "-", "22", "-7"
+                            if (imagStr.empty() || imagStr == "+") im = 1;
+                            else if (imagStr == "-") im = -1;
+                            else im = std::stoi(imagStr);
+                        } else {
+                            // mamy realną i urojoną
+                            std::string realStr = beforeI.substr(0, signPos);
+                            std::string imagStr = beforeI.substr(signPos); // łącznie ze znakiem
+                            re = std::stoi(realStr);
+                            if (imagStr == "+") im = 1;
+                            else if (imagStr == "-") im = -1;
+                            else im = std::stoi(imagStr);
+                        }
                     }
-                    int re = std::stoi(val.substr(0, plus));
-                    int im = std::stoi(val.substr(plus + 1, i - plus - 1));
                     list.push_back(new ComplexObject(re, im));
                 } else if (type == "StringObject") {
                     list.push_back(new StringObject(val));
@@ -77,6 +119,7 @@ int main() {
                 std::cerr << "Error: missing argument\n";
                 continue;
             }
+
             if (type == "IntObject") {
                 long long acc = 0;
                 for (auto& o: list)
@@ -97,7 +140,18 @@ int main() {
                     if (auto p = dynamic_cast<ComplexObject *>(&o))
                         acc += p->complex;
                 std::cout << "ComplexObject(" << acc.real()
-                        << "+" << acc.imag() << "i)\n";
+                        << (acc.imag() >= 0 ? "+" : "") << acc.imag()
+                        << "i)\n";
+            } else if (type == "StringObject") {
+                std::string acc;
+                bool first = true;
+                for (auto& o: list)
+                    if (auto p = dynamic_cast<StringObject *>(&o)) {
+                        if (!first) acc += " ";
+                        acc += p->text; // Twoje pole z napisem
+                        first = false;
+                    }
+                std::cout << "StringObject(\"" << acc << "\")\n";
             } else {
                 std::cerr << "Error: wrong type\n";
             }
@@ -121,12 +175,13 @@ int main() {
                 std::cerr << "Error: missing argument\n";
                 continue;
             }
-            for (auto& o: list) o.multiply(m);
+            for (auto& o: list)
+                o.multiply(m);
         } else {
             std::cerr << "Error: unknown command\n";
         }
     }
-
+    return 0;
 }
 
 constexpr inline size_t compileTimeStrlen(const char* text) noexcept {

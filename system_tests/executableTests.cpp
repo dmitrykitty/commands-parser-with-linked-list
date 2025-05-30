@@ -145,7 +145,6 @@ INSTANTIATE_TEST_SUITE_P(CommandsParserSystemTester,
                                          "sumDoubleObject",
                                          "mulDifferentTypes",
                                          "getByIndexComplexObject"));
-
 /* TEST_P(CommandsParserSystemTester, testVariousScenariosUsingInputAndOutputFiles) jest zamiast poniższych:
 TEST_F(CommandsParserSystemTester, addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted)
 {
