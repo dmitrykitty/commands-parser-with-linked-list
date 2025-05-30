@@ -127,10 +127,6 @@ int main() {
         }
     }
 
-
-    /// następnie można to usunąć:
-    std::cout << "Hello " << FIRSTNAME << " " << SURNAME << "!" << '\n'
-            << "make Your teacher: " << TEACHER_MAIL << " proud of you!" << std::endl;
 }
 
 constexpr inline size_t compileTimeStrlen(const char* text) noexcept {
