@@ -1,33 +1,33 @@
-/tmp/tmph24ta1zp/student/doubleObject.h:9:5: warning: Class 'DoubleObject' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+/tmp/tmpgqmqugdu/student/doubleObject.h:9:5: warning: Class 'DoubleObject' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
     DoubleObject(double dn): doubleNum(dn){}
     ^
-/tmp/tmph24ta1zp/student/intObject.h:13:5: warning: Class 'IntObject' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+/tmp/tmpgqmqugdu/student/intObject.h:13:5: warning: Class 'IntObject' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
     IntObject(int n): num(n){}
     ^
-/tmp/tmph24ta1zp/student/objectlist.h:55:9: warning: Struct 'iterator' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+/tmp/tmpgqmqugdu/student/objectlist.h:55:9: warning: Struct 'iterator' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
         iterator(Node* ptr): ptrNode(ptr) {}
         ^
-/tmp/tmph24ta1zp/student/stringObject.h:14:5: warning: Class 'StringObject' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+/tmp/tmpgqmqugdu/student/stringObject.h:14:5: warning: Class 'StringObject' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
     StringObject(std::string txt): text(std::move(txt)){}
     ^
-/tmp/tmph24ta1zp/student/main.cpp:126:29: warning: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
+/tmp/tmpgqmqugdu/student/main.cpp:126:29: warning: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
                         acc += p->num;
                             ^
-/tmp/tmph24ta1zp/student/main.cpp:132:29: warning: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
+/tmp/tmpgqmqugdu/student/main.cpp:132:29: warning: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
                         acc += p->doubleNum;
                             ^
-/tmp/tmph24ta1zp/student/main.cpp:140:29: warning: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
+/tmp/tmpgqmqugdu/student/main.cpp:140:29: warning: Consider using std::accumulate algorithm instead of a raw loop. [useStlAlgorithm]
                         acc += p->complex;
                             ^
-/tmp/tmph24ta1zp/student/objectlist.cpp:35:0: warning: Consider using std::any_of algorithm instead of a raw loop. [useStlAlgorithm]
+/tmp/tmpgqmqugdu/student/objectlist.cpp:35:0: warning: Consider using std::any_of algorithm instead of a raw loop. [useStlAlgorithm]
         if (o == obj)
 ^
-/tmp/tmph24ta1zp/student/objectlist.cpp:40:0: warning: The function 'push_front' is never used. [unusedFunction]
+/tmp/tmpgqmqugdu/student/objectlist.cpp:40:0: warning: The function 'push_front' is never used. [unusedFunction]
 void ObjectList::push_front(value_type* newObject) {
 ^
-/tmp/tmph24ta1zp/student/objectlist.cpp:109:0: warning: The function 'reverse' is never used. [unusedFunction]
+/tmp/tmpgqmqugdu/student/objectlist.cpp:109:0: warning: The function 'reverse' is never used. [unusedFunction]
 void ObjectList::reverse() noexcept {
 ^
-/tmp/tmph24ta1zp/student/objectlist.cpp:142:0: warning: The function 'erase_after' is never used. [unusedFunction]
+/tmp/tmpgqmqugdu/student/objectlist.cpp:142:0: warning: The function 'erase_after' is never used. [unusedFunction]
 void ObjectList::erase_after(iterator position) {
 ^
