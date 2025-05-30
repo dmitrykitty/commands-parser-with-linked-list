@@ -10,33 +10,17 @@
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Looking for __asan_init in asan
--- Looking for __asan_init in asan - found
--- Looking for __ubsan_handle_add_overflow in ubsan
--- Looking for __ubsan_handle_add_overflow in ubsan - found
--- Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne
--- Znaleziono include-what-you-use: /usr/bin/include-what-you-use
--- Używany mapping IWYU: /tmp/tmpuqn3v2gn/student/unit_tests/include-what-you-use_exceptions.imp
-Katalog do zbudowanego projektu: /tmp/tmpuqn3v2gn/student/build
- + Znaleziono nagłówki: /tmp/tmpuqn3v2gn/student/complexObject.h;/tmp/tmpuqn3v2gn/student/doubleObject.h;/tmp/tmpuqn3v2gn/student/intObject.h;/tmp/tmpuqn3v2gn/student/object.h;/tmp/tmpuqn3v2gn/student/objectlist.h;/tmp/tmpuqn3v2gn/student/stringObject.h
- + Znaleziono źródła: /tmp/tmpuqn3v2gn/student/complexObject.cpp;/tmp/tmpuqn3v2gn/student/doubleObject.cpp;/tmp/tmpuqn3v2gn/student/intObject.cpp;/tmp/tmpuqn3v2gn/student/main.cpp;/tmp/tmpuqn3v2gn/student/object.cpp;/tmp/tmpuqn3v2gn/student/objectlist.cpp;/tmp/tmpuqn3v2gn/student/stringObject.cpp
- + Znaleziono źródła bez main.cpp: /tmp/tmpuqn3v2gn/student/complexObject.cpp;/tmp/tmpuqn3v2gn/student/doubleObject.cpp;/tmp/tmpuqn3v2gn/student/intObject.cpp;/tmp/tmpuqn3v2gn/student/object.cpp;/tmp/tmpuqn3v2gn/student/objectlist.cpp;/tmp/tmpuqn3v2gn/student/stringObject.cpp
-	* valgrind found: /usr/bin/valgrind
-	* cppcheck found: /usr/local/bin/cppcheck
-	+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: /tmp/tmpuqn3v2gn/student/complexObject.h;/tmp/tmpuqn3v2gn/student/doubleObject.h;/tmp/tmpuqn3v2gn/student/intObject.h;/tmp/tmpuqn3v2gn/student/object.h;/tmp/tmpuqn3v2gn/student/objectlist.h;/tmp/tmpuqn3v2gn/student/stringObject.h and /tmp/tmpuqn3v2gn/student/complexObject.cpp;/tmp/tmpuqn3v2gn/student/doubleObject.cpp;/tmp/tmpuqn3v2gn/student/intObject.cpp;/tmp/tmpuqn3v2gn/student/main.cpp;/tmp/tmpuqn3v2gn/student/object.cpp;/tmp/tmpuqn3v2gn/student/objectlist.cpp;/tmp/tmpuqn3v2gn/student/stringObject.cpp
-	+ adding command found: `clang-tidy` to run static analysis on source files: /tmp/tmpuqn3v2gn/student/complexObject.cpp;/tmp/tmpuqn3v2gn/student/doubleObject.cpp;/tmp/tmpuqn3v2gn/student/intObject.cpp;/tmp/tmpuqn3v2gn/student/main.cpp;/tmp/tmpuqn3v2gn/student/object.cpp;/tmp/tmpuqn3v2gn/student/objectlist.cpp;/tmp/tmpuqn3v2gn/student/stringObject.cpp and /tmp/tmpuqn3v2gn/student/complexObject.h;/tmp/tmpuqn3v2gn/student/doubleObject.h;/tmp/tmpuqn3v2gn/student/intObject.h;/tmp/tmpuqn3v2gn/student/object.h;/tmp/tmpuqn3v2gn/student/objectlist.h;/tmp/tmpuqn3v2gn/student/stringObject.h
-	+ adding command found: `flawfinder` to perform security analysis on files: /tmp/tmpuqn3v2gn/student/complexObject.cpp;/tmp/tmpuqn3v2gn/student/doubleObject.cpp;/tmp/tmpuqn3v2gn/student/intObject.cpp;/tmp/tmpuqn3v2gn/student/main.cpp;/tmp/tmpuqn3v2gn/student/object.cpp;/tmp/tmpuqn3v2gn/student/objectlist.cpp;/tmp/tmpuqn3v2gn/student/stringObject.cpp and /tmp/tmpuqn3v2gn/student/complexObject.h;/tmp/tmpuqn3v2gn/student/doubleObject.h;/tmp/tmpuqn3v2gn/student/intObject.h;/tmp/tmpuqn3v2gn/student/object.h;/tmp/tmpuqn3v2gn/student/objectlist.h;/tmp/tmpuqn3v2gn/student/stringObject.h
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD
--- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
--- Found Threads: TRUE  
- + Znaleziono pliki testów: /tmp/tmpuqn3v2gn/student/unit_tests/objectUniqueListTest.cpp
- + katalog nagłówków: 
-	* perf found: /usr/bin/perf, so adding command: 'perf_stats_unit_tests'
- + Znaleziono pliki wejścia/wyjścia do testów: /tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/getByIndexComplexObject.in.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/getByIndexComplexObject.out.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/mulDifferentTypes.in.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/mulDifferentTypes.out.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/sumDoubleObject.in.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/sumDoubleObject.out.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/sumStringObject.in.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/sumStringObject.out.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/sumStringObjectWhenNoStringObject.in.txt;/tmp/tmpuqn3v2gn/student/system_tests/inputOutputData/sumStringObjectWhenNoStringObject.out.txt
-Using Boost: /tmp/tmpuqn3v2gn/student/system_tests/libs/boost_1_81/
-Using Boost library (to run process)
--- Configuring done
--- Generating done
--- Build files have been written to: /tmp/tmpuqn3v2gn/student/build
+CMake Error at CMakeLists.txt:7 (cmake_policy):
+  Policy "CMP0167" is not known to this version of CMake.
+
+
+CMake Error at /usr/share/cmake-3.22/Modules/FindBoost.cmake:855 (message):
+  ERROR: Boost_LIBRARYDIR is not the correct spelling.  The proper spelling
+  is BOOST_LIBRARYDIR.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.22/Modules/FindBoost.cmake:1685 (_Boost_CHECK_SPELLING)
+  CMakeLists.txt:16 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/tmp/tmp0jufhmx8/student/build/CMakeFiles/CMakeOutput.log".
