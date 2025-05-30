@@ -35,10 +35,9 @@ int main() {
     ObjectList list;
     std::string line;
     while (std::getline(std::cin, line)) {
-        // 1) usuń końcowy '\r' jeśli jest (Windowsowe CRLF)
+        //usuwa końcowy '\r' jeśli jest (Windowsowe CRLF)
         if (!line.empty() && line.back() == '\r')
             line.pop_back();
-        // 2) pomiń puste
         if (line.empty()) continue;
 
         std::istringstream iss(line);
@@ -46,7 +45,7 @@ int main() {
         iss >> cmd;
 
         if (cmd == "add") {
-            // znajdź pierwszy ':' w oryginalnej linii
+            // znajduje pierwszy ':' w oryginalnej linii
             auto colonPos = line.find(':');
             if (colonPos == std::string::npos) {
                 std::cerr << "Error: bad add format\n";
@@ -73,7 +72,7 @@ int main() {
 
                     const std::size_t iPos = val.find('i');
                     if (iPos == std::string::npos) {
-                        // brak 'i'  → czysta część rzeczywista
+                        // brak 'i'  -> czysta część rzeczywista
                         re = std::stoi(val);
                         im = 0;
                     } else {
@@ -87,14 +86,13 @@ int main() {
                                 signPos = k;
 
                         if (signPos == std::string::npos) {
-                            // brak separatora → tylko część urojona
+                            // brak separatora -> tylko część urojona
                             re = 0;
-                            const std::string& imagStr = beforeI; // może "", "+", "-", "22", "-7"
+                            const std::string& imagStr = beforeI;
                             if (imagStr.empty() || imagStr == "+") im = 1;
                             else if (imagStr == "-") im = -1;
                             else im = std::stoi(imagStr);
                         } else {
-                            // mamy realną i urojoną
                             std::string realStr = beforeI.substr(0, signPos);
                             std::string imagStr = beforeI.substr(signPos); // łącznie ze znakiem
                             re = std::stoi(realStr);
@@ -148,7 +146,7 @@ int main() {
                 for (auto& o: list)
                     if (auto p = dynamic_cast<StringObject *>(&o)) {
                         if (!first) acc += " ";
-                        acc += p->text; // Twoje pole z napisem
+                        acc += p->text;
                         first = false;
                     }
                 std::cout << "StringObject(\"" << acc << "\")\n";
