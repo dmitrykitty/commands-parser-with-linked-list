@@ -1,97 +1,39 @@
 {
-  "tests": 10,
-  "failures": 7,
+  "tests": 6,
+  "failures": 4,
   "disabled": 0,
   "errors": 0,
-  "timestamp": "2025-05-30T16:59:42Z",
-  "time": "10.047s",
+  "timestamp": "2025-05-30T17:14:53Z",
+  "time": "6.156s",
   "name": "AllTests",
   "testsuites": [
     {
       "name": "CommandsParserSystemTester",
-      "tests": 6,
-      "failures": 3,
+      "tests": 2,
+      "failures": 0,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-05-30T16:59:42Z",
-      "time": "6.02s",
+      "timestamp": "2025-05-30T17:14:53Z",
+      "time": "2.135s",
       "testsuite": [
         {
           "name": "executingOurProgramWithoutAnyInput_expectedNoOutput",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
+          "file": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp",
           "line": 97,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:42Z",
-          "time": "1.001s",
+          "timestamp": "2025-05-30T17:14:53Z",
+          "time": "1.003s",
           "classname": "CommandsParserSystemTester"
         },
         {
           "name": "testInvalidCommand",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
+          "file": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp",
           "line": 106,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:43Z",
+          "timestamp": "2025-05-30T17:14:54Z",
           "time": "1.001s",
-          "classname": "CommandsParserSystemTester"
-        },
-        {
-          "name": "addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
-          "line": 149,
-          "status": "RUN",
-          "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:44Z",
-          "time": "1.004s",
-          "classname": "CommandsParserSystemTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:156\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 27\n",
-              "type": ""
-            }
-          ]
-        },
-        {
-          "name": "addingManyTypesThenSumOfDoubles_expectedSumOfDoublesPrinted",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
-          "line": 166,
-          "status": "RUN",
-          "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:45Z",
-          "time": "1.004s",
-          "classname": "CommandsParserSystemTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:173\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 20\n",
-              "type": ""
-            }
-          ]
-        },
-        {
-          "name": "multiplyAllObjectsThenSum_expectedSumDoubledOfAllTypes",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
-          "line": 183,
-          "status": "RUN",
-          "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:46Z",
-          "time": "1.004s",
-          "classname": "CommandsParserSystemTester",
-          "failures": [
-            {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:190\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 41\n",
-              "type": ""
-            }
-          ]
-        },
-        {
-          "name": "sumStringObjectWhenNoStringObject_expectedNoOutput",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
-          "line": 200,
-          "status": "RUN",
-          "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:47Z",
-          "time": "1.003s",
           "classname": "CommandsParserSystemTester"
         }
       ]
@@ -102,22 +44,22 @@
       "failures": 4,
       "disabled": 0,
       "errors": 0,
-      "timestamp": "2025-05-30T16:59:48Z",
-      "time": "4.026s",
+      "timestamp": "2025-05-30T17:14:55Z",
+      "time": "4.019s",
       "testsuite": [
         {
           "name": "testVariousScenariosUsingInputAndOutputFiles\/0",
           "value_param": "\"sumStringObject\"",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
+          "file": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp",
           "line": 120,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:48Z",
-          "time": "1.008s",
+          "timestamp": "2025-05-30T17:14:55Z",
+          "time": "1.005s",
           "classname": "CommandsParserSystemTester\/CommandsParserSystemTester",
           "failures": [
             {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 27\nunexpected stderror output:\n\n=================================================================\n==453==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 120 byte(s) in 3 object(s) allocated from:\n    #0 0x7f0ab678eba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5645466c144d in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:107\n    #2 0x7f0ab5b27d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 32 byte(s) in 2 object(s) allocated from:\n    #0 0x7f0ab678eba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5645466c0d58 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:70\n    #2 0x7f0ab5b27d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nIndirect leak of 27 byte(s) in 1 object(s) allocated from:\n    #0 0x7f0ab678eba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5645466cfc26 in std::__new_allocator<char>::allocate(unsigned long, void const*) \/usr\/include\/c++\/13\/bits\/new_allocator.h:147\n    #2 0x5645466ced51 in std::allocator<char>::allocate(unsigned long) \/usr\/include\/c++\/13\/bits\/allocator.h:198\n    #3 0x5645466ced51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/alloc_traits.h:482\n    #4 0x5645466ced51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.h:126\n    #5 0x5645466ce23f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:155\n    #6 0x5645466cca83 in void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:225\n    #7 0x5645466ca446 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) \/usr\/include\/c++\/13\/bits\/basic_string.h:541\n    #8 0x5645466c14af in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:107\n    #9 0x7f0ab5b27d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 179 byte(s) leaked in 6 allocation(s).\n\n",
+              "failure": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 27\nunexpected stderror output:\n\n=================================================================\n==437==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 120 byte(s) in 3 object(s) allocated from:\n    #0 0x7f02ae776ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x558eeafd444d in main \/tmp\/tmpps3jlajo\/student\/main.cpp:107\n    #2 0x7f02adb0fd8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 32 byte(s) in 2 object(s) allocated from:\n    #0 0x7f02ae776ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x558eeafd3d58 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:70\n    #2 0x7f02adb0fd8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nIndirect leak of 27 byte(s) in 1 object(s) allocated from:\n    #0 0x7f02ae776ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x558eeafe2c26 in std::__new_allocator<char>::allocate(unsigned long, void const*) \/usr\/include\/c++\/13\/bits\/new_allocator.h:147\n    #2 0x558eeafe1d51 in std::allocator<char>::allocate(unsigned long) \/usr\/include\/c++\/13\/bits\/allocator.h:198\n    #3 0x558eeafe1d51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/alloc_traits.h:482\n    #4 0x558eeafe1d51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.h:126\n    #5 0x558eeafe123f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:155\n    #6 0x558eeafdfa83 in void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:225\n    #7 0x558eeafdd446 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) \/usr\/include\/c++\/13\/bits\/basic_string.h:541\n    #8 0x558eeafd44af in main \/tmp\/tmpps3jlajo\/student\/main.cpp:107\n    #9 0x7f02adb0fd8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 179 byte(s) leaked in 6 allocation(s).\n\n",
               "type": ""
             }
           ]
@@ -125,16 +67,16 @@
         {
           "name": "testVariousScenariosUsingInputAndOutputFiles\/1",
           "value_param": "\"sumDoubleObject\"",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
+          "file": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp",
           "line": 120,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:49Z",
+          "timestamp": "2025-05-30T17:14:56Z",
           "time": "1.004s",
           "classname": "CommandsParserSystemTester\/CommandsParserSystemTester",
           "failures": [
             {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 20\nunexpected stderror output:\n\n=================================================================\n==457==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 120 byte(s) in 3 object(s) allocated from:\n    #0 0x7ff2bfc0eba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x55e61aafb44d in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:107\n    #2 0x7ff2befa7d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 32 byte(s) in 2 object(s) allocated from:\n    #0 0x7ff2bfc0eba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x55e61aafad58 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:70\n    #2 0x7ff2befa7d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7ff2bfc0eba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x55e61aafacb7 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:67\n    #2 0x7ff2befa7d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 168 byte(s) leaked in 6 allocation(s).\n\n",
+              "failure": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 20\nunexpected stderror output:\n\n=================================================================\n==441==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 120 byte(s) in 3 object(s) allocated from:\n    #0 0x7ff399f0cba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x55579397a44d in main \/tmp\/tmpps3jlajo\/student\/main.cpp:107\n    #2 0x7ff3992a5d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 32 byte(s) in 2 object(s) allocated from:\n    #0 0x7ff399f0cba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555793979d58 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:70\n    #2 0x7ff3992a5d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7ff399f0cba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555793979cb7 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:67\n    #2 0x7ff3992a5d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 168 byte(s) leaked in 6 allocation(s).\n\n",
               "type": ""
             }
           ]
@@ -142,16 +84,16 @@
         {
           "name": "testVariousScenariosUsingInputAndOutputFiles\/2",
           "value_param": "\"mulDifferentTypes\"",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
+          "file": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp",
           "line": 120,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:50Z",
-          "time": "1.008s",
+          "timestamp": "2025-05-30T17:14:57Z",
+          "time": "1.006s",
           "classname": "CommandsParserSystemTester\/CommandsParserSystemTester",
           "failures": [
             {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 41\nunexpected stderror output:\n\n=================================================================\n==461==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 40 byte(s) in 1 object(s) allocated from:\n    #0 0x7fa48f7baba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555c3e7b244d in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:107\n    #2 0x7fa48eb53d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7fa48f7baba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555c3e7b23c6 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:105\n    #2 0x7fa48eb53d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7fa48f7baba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555c3e7b1cb7 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:67\n    #2 0x7fa48eb53d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7fa48f7baba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555c3e7b1d58 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:70\n    #2 0x7fa48eb53d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nIndirect leak of 33 byte(s) in 1 object(s) allocated from:\n    #0 0x7fa48f7baba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x555c3e7c0c26 in std::__new_allocator<char>::allocate(unsigned long, void const*) \/usr\/include\/c++\/13\/bits\/new_allocator.h:147\n    #2 0x555c3e7bfd51 in std::allocator<char>::allocate(unsigned long) \/usr\/include\/c++\/13\/bits\/allocator.h:198\n    #3 0x555c3e7bfd51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/alloc_traits.h:482\n    #4 0x555c3e7bfd51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.h:126\n    #5 0x555c3e7bf23f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:155\n    #6 0x555c3e7c0842 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:328\n    #7 0x555c3e7c059e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:419\n    #8 0x555c3e7bfa72 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.h:1447\n    #9 0x555c3e7bd6ea in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) \/usr\/include\/c++\/13\/bits\/basic_string.h:1413\n    #10 0x555c3e7bc3a8 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) \/usr\/include\/c++\/13\/bits\/basic_string.h:1355\n    #11 0x555c3e7c57ab in StringObject::multiply(int) \/tmp\/tmpgqmqugdu\/student\/stringObject.cpp:18\n    #12 0x555c3e7b55ff in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:182\n    #13 0x7fa48eb53d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 121 byte(s) leaked in 5 allocation(s).\n\n",
+              "failure": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 41\nunexpected stderror output:\n\n=================================================================\n==445==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 40 byte(s) in 1 object(s) allocated from:\n    #0 0x7f55c3db8ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5594f9b2444d in main \/tmp\/tmpps3jlajo\/student\/main.cpp:107\n    #2 0x7f55c3151d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7f55c3db8ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5594f9b243c6 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:105\n    #2 0x7f55c3151d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7f55c3db8ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5594f9b23cb7 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:67\n    #2 0x7f55c3151d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nDirect leak of 16 byte(s) in 1 object(s) allocated from:\n    #0 0x7f55c3db8ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5594f9b23d58 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:70\n    #2 0x7f55c3151d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nIndirect leak of 33 byte(s) in 1 object(s) allocated from:\n    #0 0x7f55c3db8ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5594f9b32c26 in std::__new_allocator<char>::allocate(unsigned long, void const*) \/usr\/include\/c++\/13\/bits\/new_allocator.h:147\n    #2 0x5594f9b31d51 in std::allocator<char>::allocate(unsigned long) \/usr\/include\/c++\/13\/bits\/allocator.h:198\n    #3 0x5594f9b31d51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/alloc_traits.h:482\n    #4 0x5594f9b31d51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.h:126\n    #5 0x5594f9b3123f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:155\n    #6 0x5594f9b32842 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:328\n    #7 0x5594f9b3259e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.tcc:419\n    #8 0x5594f9b31a72 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) \/usr\/include\/c++\/13\/bits\/basic_string.h:1447\n    #9 0x5594f9b2f6ea in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) \/usr\/include\/c++\/13\/bits\/basic_string.h:1413\n    #10 0x5594f9b2e3a8 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) \/usr\/include\/c++\/13\/bits\/basic_string.h:1355\n    #11 0x5594f9b377ab in StringObject::multiply(int) \/tmp\/tmpps3jlajo\/student\/stringObject.cpp:18\n    #12 0x5594f9b275ff in main \/tmp\/tmpps3jlajo\/student\/main.cpp:182\n    #13 0x7f55c3151d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 121 byte(s) leaked in 5 allocation(s).\n\n",
               "type": ""
             }
           ]
@@ -159,16 +101,16 @@
         {
           "name": "testVariousScenariosUsingInputAndOutputFiles\/3",
           "value_param": "\"getByIndexComplexObject\"",
-          "file": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp",
+          "file": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp",
           "line": 120,
           "status": "RUN",
           "result": "COMPLETED",
-          "timestamp": "2025-05-30T16:59:51Z",
-          "time": "1.005s",
+          "timestamp": "2025-05-30T17:14:58Z",
+          "time": "1.003s",
           "classname": "CommandsParserSystemTester\/CommandsParserSystemTester",
           "failures": [
             {
-              "failure": "\/tmp\/tmpgqmqugdu\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 10\nunexpected stderror output:\n\n=================================================================\n==465==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 80 byte(s) in 5 object(s) allocated from:\n    #0 0x7f7e810f5ba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x5577389823c6 in main \/tmp\/tmpgqmqugdu\/student\/main.cpp:105\n    #2 0x7f7e8048ed8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 80 byte(s) leaked in 5 allocation(s).\n\n",
+              "failure": "\/tmp\/tmpps3jlajo\/student\/system_tests\/executableTests.cpp:131\nExpected equality of these values:\n  0\n  output.linesOfStderr_.size()\n    Which is: 10\nunexpected stderror output:\n\n=================================================================\n==449==ERROR: LeakSanitizer: detected memory leaks\n\nDirect leak of 80 byte(s) in 5 object(s) allocated from:\n    #0 0x7f6807b3fba8 in operator new(unsigned long) ..\/..\/..\/..\/src\/libsanitizer\/asan\/asan_new_delete.cpp:95\n    #1 0x562f43ba83c6 in main \/tmp\/tmpps3jlajo\/student\/main.cpp:105\n    #2 0x7f6806ed8d8f in __libc_start_call_main ..\/sysdeps\/nptl\/libc_start_call_main.h:58\n\nSUMMARY: AddressSanitizer: 80 byte(s) leaked in 5 allocation(s).\n\n",
               "type": ""
             }
           ]

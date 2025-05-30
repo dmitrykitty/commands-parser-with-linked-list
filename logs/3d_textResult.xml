@@ -1,4 +1,4 @@
-Running main() from /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc
+Running main() from /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc
 [==========] Running 15 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 15 tests from ObjectListTester
@@ -32,391 +32,365 @@ Running main() from /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest
 [       OK ] ObjectListTester.assignmentOperatorCopying_expectedNewValues (0 ms)
 [ RUN      ] ObjectListTester.assignmentOperatorMoving_expectedAllElementsMoved
 [       OK ] ObjectListTester.assignmentOperatorMoving_expectedAllElementsMoved (0 ms)
-[----------] 15 tests from ObjectListTester (3 ms total)
+[----------] 15 tests from ObjectListTester (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 15 tests from 1 test suite ran. (4 ms total)
+[==========] 15 tests from 1 test suite ran. (2 ms total)
 [  PASSED  ] 15 tests.
 
 =================================================================
 ==369==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d044a7b in ObjectListTester_eraseMiddleElement_expectedMiddleElementErased_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:298
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8aa7b in ObjectListTester_eraseMiddleElement_expectedMiddleElementErased_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:298
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d038bc6 in ObjectListTester_pushFrontOfElements_expectedSizeIncreases_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:46
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f7ebc6 in ObjectListTester_pushFrontOfElements_expectedSizeIncreases_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:46
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d03b329 in ObjectListTester_popFrontOfElements_expectedSizeDecreases_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:88
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f81329 in ObjectListTester_popFrontOfElements_expectedSizeDecreases_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:88
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d039b15 in ObjectListTester_pushFrontOfDuplicatedElements_expectedSizeIncreasesOnlyWhenUniqueElementAdded_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:63
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f7fb15 in ObjectListTester_pushFrontOfDuplicatedElements_expectedSizeIncreasesOnlyWhenUniqueElementAdded_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:63
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d03ee84 in ObjectListTester_clear_expectedAllElementsRemoved_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:153
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f84e84 in ObjectListTester_clear_expectedAllElementsRemoved_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:153
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d03a58d in ObjectListTester_pushFrontOfDuplicatedElements_expectedSizeIncreasesOnlyWhenUniqueElementAdded_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:71
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8058d in ObjectListTester_pushFrontOfDuplicatedElements_expectedSizeIncreasesOnlyWhenUniqueElementAdded_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:71
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d0429a2 in ObjectListTester_loopingWithIterators_expectedSuccess_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:231
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f889a2 in ObjectListTester_loopingWithIterators_expectedSuccess_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:231
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d0436c8 in ObjectListTester_eraseAfterMiddleElement_expectedMiddleElementErased_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:258
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f896c8 in ObjectListTester_eraseAfterMiddleElement_expectedMiddleElementErased_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:258
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d03d08b in ObjectListTester_frontOfLists_expectedCorrectFirstElementReturned_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:118
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8308b in ObjectListTester_frontOfLists_expectedCorrectFirstElementReturned_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:118
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d045d8c in ObjectListTester_copyConstructorImplemented_expected2ListsWithTheSameElementsInTheSameOrder_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:336
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8bd8c in ObjectListTester_copyConstructorImplemented_expected2ListsWithTheSameElementsInTheSameOrder_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:336
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d084158 in StringObject::clone() const /tmp/tmpgqmqugdu/student/stringObject.h:17
-    #2 0x56263d07f2ce in ObjectList::ObjectList(ObjectList const&) /tmp/tmpgqmqugdu/student/objectlist.cpp:12
-    #3 0x56263d046133 in ObjectListTester_copyConstructorImplemented_expected2ListsWithTheSameElementsInTheSameOrder_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:342
-    #4 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #5 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #6 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #7 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #8 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #9 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #10 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #11 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #12 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #13 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8fca158 in StringObject::clone() const /tmp/tmpps3jlajo/student/stringObject.h:17
+    #2 0x5569b8fc52ce in ObjectList::ObjectList(ObjectList const&) /tmp/tmpps3jlajo/student/objectlist.cpp:12
+    #3 0x5569b8f8c133 in ObjectListTester_copyConstructorImplemented_expected2ListsWithTheSameElementsInTheSameOrder_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:342
+    #4 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #5 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #6 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #7 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #8 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #9 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #10 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #11 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #12 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #13 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #14 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #15 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d047762 in ObjectListTester_moveConstructorImplemented_expectedAllElementsMovedToOrderContainer_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:370
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8d762 in ObjectListTester_moveConstructorImplemented_expectedAllElementsMovedToOrderContainer_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:370
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d048f85 in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:401
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8ef85 in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:401
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d0406da in ObjectListTester_reverse_expectedAllElementsReversed_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:178
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f866da in ObjectListTester_reverse_expectedAllElementsReversed_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:178
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d084158 in StringObject::clone() const /tmp/tmpgqmqugdu/student/stringObject.h:17
-    #2 0x56263d082252 in ObjectList::operator=(ObjectList const&) /tmp/tmpgqmqugdu/student/objectlist.cpp:164
-    #3 0x56263d049cc8 in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:416
-    #4 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #5 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #6 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #7 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #8 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #9 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #10 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #11 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #12 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #13 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8fca158 in StringObject::clone() const /tmp/tmpps3jlajo/student/stringObject.h:17
+    #2 0x5569b8fc8252 in ObjectList::operator=(ObjectList const&) /tmp/tmpps3jlajo/student/objectlist.cpp:164
+    #3 0x5569b8f8fcc8 in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:416
+    #4 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #5 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #6 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #7 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #8 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #9 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #10 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #11 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #12 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #13 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #14 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #15 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d084158 in StringObject::clone() const /tmp/tmpgqmqugdu/student/stringObject.h:17
-    #2 0x56263d082252 in ObjectList::operator=(ObjectList const&) /tmp/tmpgqmqugdu/student/objectlist.cpp:164
-    #3 0x56263d04b8de in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:443
-    #4 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #5 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #6 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #7 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #8 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #9 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #10 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #11 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #12 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #13 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #14 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #15 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8fca158 in StringObject::clone() const /tmp/tmpps3jlajo/student/stringObject.h:17
+    #2 0x5569b8fc8252 in ObjectList::operator=(ObjectList const&) /tmp/tmpps3jlajo/student/objectlist.cpp:164
+    #3 0x5569b8f918de in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:443
+    #4 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #5 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #6 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #7 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #8 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #9 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #10 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #11 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #12 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #13 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #14 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #15 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d04d9fb in ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:474
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f939fb in ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:474
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 400 byte(s) in 10 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d04dd78 in ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:478
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f93d78 in ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:478
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 120 byte(s) in 3 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d04933c in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:408
-    #2 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #3 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #4 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #5 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #6 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #7 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #8 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #9 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #10 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #11 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #12 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #13 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8f8f33c in ObjectListTester_assignmentOperatorCopying_expectedNewValues_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:408
+    #2 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #3 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #4 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #5 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #6 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #7 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #8 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #9 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #10 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #11 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #12 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #13 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Indirect leak of 287 byte(s) in 7 object(s) allocated from:
-    #0 0x7f223ef18ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x56263d072e8c in std::__new_allocator<char>::allocate(unsigned long, void const*) /usr/include/c++/13/bits/new_allocator.h:147
-    #2 0x56263d06949a in std::allocator<char>::allocate(unsigned long) /usr/include/c++/13/bits/allocator.h:198
-    #3 0x56263d06949a in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/alloc_traits.h:482
-    #4 0x56263d06949a in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/basic_string.h:126
-    #5 0x56263d0684c1 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:155
-    #6 0x56263d068f12 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:328
-    #7 0x56263d06e625 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:543
-    #8 0x56263d068832 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.h:2196
-    #9 0x56263d061a95 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned long, char const*) /usr/include/c++/13/bits/basic_string.h:1953
-    #10 0x56263d05ae0e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) /usr/include/c++/13/bits/basic_string.h:3664
-    #11 0x56263d04df25 in ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody() /tmp/tmpgqmqugdu/student/unit_tests/objectUniqueListTest.cpp:478
-    #12 0x56263d1c18b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #13 0x56263d1948e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #14 0x56263d0d5cf9 in testing::Test::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2728
-    #15 0x56263d0d9ac6 in testing::TestInfo::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2874
-    #16 0x56263d0de371 in testing::TestSuite::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:3052
-    #17 0x56263d129e85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:6004
-    #18 0x56263d1c8707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2653
-    #19 0x56263d19ad0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:2689
-    #20 0x56263d11c2f3 in testing::UnitTest::Run() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest.cc:5583
-    #21 0x56263d229338 in RUN_ALL_TESTS() /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
-    #22 0x56263d229185 in main /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc:64
-    #23 0x7f223e2b1d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f1d77a87ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5569b8fb8e8c in std::__new_allocator<char>::allocate(unsigned long, void const*) /usr/include/c++/13/bits/new_allocator.h:147
+    #2 0x5569b8faf49a in std::allocator<char>::allocate(unsigned long) /usr/include/c++/13/bits/allocator.h:198
+    #3 0x5569b8faf49a in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/alloc_traits.h:482
+    #4 0x5569b8faf49a in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/basic_string.h:126
+    #5 0x5569b8fae4c1 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:155
+    #6 0x5569b8faef12 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:328
+    #7 0x5569b8fb4625 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:543
+    #8 0x5569b8fae832 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::replace(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.h:2196
+    #9 0x5569b8fa7a95 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::insert(unsigned long, char const*) /usr/include/c++/13/bits/basic_string.h:1953
+    #10 0x5569b8fa0e0e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) /usr/include/c++/13/bits/basic_string.h:3664
+    #11 0x5569b8f93f25 in ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody() /tmp/tmpps3jlajo/student/unit_tests/objectUniqueListTest.cpp:478
+    #12 0x5569b91078b1 in void testing::internal::HandleSehExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #13 0x5569b90da8e3 in void testing::internal::HandleExceptionsInMethodIfSupported<testing::Test, void>(testing::Test*, void (testing::Test::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #14 0x5569b901bcf9 in testing::Test::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2728
+    #15 0x5569b901fac6 in testing::TestInfo::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2874
+    #16 0x5569b9024371 in testing::TestSuite::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:3052
+    #17 0x5569b906fe85 in testing::internal::UnitTestImpl::RunAllTests() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:6004
+    #18 0x5569b910e707 in bool testing::internal::HandleSehExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2653
+    #19 0x5569b90e0d0e in bool testing::internal::HandleExceptionsInMethodIfSupported<testing::internal::UnitTestImpl, bool>(testing::internal::UnitTestImpl*, bool (testing::internal::UnitTestImpl::*)(), char const*) /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:2689
+    #20 0x5569b90622f3 in testing::UnitTest::Run() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest.cc:5583
+    #21 0x5569b916f338 in RUN_ALL_TESTS() /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/include/gtest/gtest.h:2334
+    #22 0x5569b916f185 in main /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc:64
+    #23 0x7f1d76e20d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 7607 byte(s) leaked in 190 allocation(s).
-Running main() from /tmp/tmpgqmqugdu/student/unit_tests/lib/googletest/src/gtest_main.cc
-[==========] Running 10 tests from 2 test suites.
+Running main() from /tmp/tmpps3jlajo/student/unit_tests/lib/googletest/src/gtest_main.cc
+[==========] Running 6 tests from 2 test suites.
 [----------] Global test environment set-up.
-[----------] 6 tests from CommandsParserSystemTester
+[----------] 2 tests from CommandsParserSystemTester
 [ RUN      ] CommandsParserSystemTester.executingOurProgramWithoutAnyInput_expectedNoOutput
-[       OK ] CommandsParserSystemTester.executingOurProgramWithoutAnyInput_expectedNoOutput (1001 ms)
+[       OK ] CommandsParserSystemTester.executingOurProgramWithoutAnyInput_expectedNoOutput (1003 ms)
 [ RUN      ] CommandsParserSystemTester.testInvalidCommand
 [       OK ] CommandsParserSystemTester.testInvalidCommand (1001 ms)
-[ RUN      ] CommandsParserSystemTester.addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:156: Failure
-Expected equality of these values:
-  0
-  output.linesOfStderr_.size()
-    Which is: 27
-
-[  FAILED  ] CommandsParserSystemTester.addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted (1004 ms)
-[ RUN      ] CommandsParserSystemTester.addingManyTypesThenSumOfDoubles_expectedSumOfDoublesPrinted
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:173: Failure
-Expected equality of these values:
-  0
-  output.linesOfStderr_.size()
-    Which is: 20
-
-[  FAILED  ] CommandsParserSystemTester.addingManyTypesThenSumOfDoubles_expectedSumOfDoublesPrinted (1004 ms)
-[ RUN      ] CommandsParserSystemTester.multiplyAllObjectsThenSum_expectedSumDoubledOfAllTypes
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:190: Failure
-Expected equality of these values:
-  0
-  output.linesOfStderr_.size()
-    Which is: 41
-
-[  FAILED  ] CommandsParserSystemTester.multiplyAllObjectsThenSum_expectedSumDoubledOfAllTypes (1004 ms)
-[ RUN      ] CommandsParserSystemTester.sumStringObjectWhenNoStringObject_expectedNoOutput
-[       OK ] CommandsParserSystemTester.sumStringObjectWhenNoStringObject_expectedNoOutput (1003 ms)
-[----------] 6 tests from CommandsParserSystemTester (6020 ms total)
+[----------] 2 tests from CommandsParserSystemTester (2135 ms total)
 
 [----------] 4 tests from CommandsParserSystemTester/CommandsParserSystemTester
 [ RUN      ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/0
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:131: Failure
+/tmp/tmpps3jlajo/student/system_tests/executableTests.cpp:131: Failure
 Expected equality of these values:
   0
   output.linesOfStderr_.size()
@@ -424,36 +398,36 @@ Expected equality of these values:
 unexpected stderror output:
 
 =================================================================
-==453==ERROR: LeakSanitizer: detected memory leaks
+==437==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 120 byte(s) in 3 object(s) allocated from:
-    #0 0x7f0ab678eba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x5645466c144d in main /tmp/tmpgqmqugdu/student/main.cpp:107
-    #2 0x7f0ab5b27d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f02ae776ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x558eeafd444d in main /tmp/tmpps3jlajo/student/main.cpp:107
+    #2 0x7f02adb0fd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 32 byte(s) in 2 object(s) allocated from:
-    #0 0x7f0ab678eba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x5645466c0d58 in main /tmp/tmpgqmqugdu/student/main.cpp:70
-    #2 0x7f0ab5b27d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f02ae776ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x558eeafd3d58 in main /tmp/tmpps3jlajo/student/main.cpp:70
+    #2 0x7f02adb0fd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Indirect leak of 27 byte(s) in 1 object(s) allocated from:
-    #0 0x7f0ab678eba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x5645466cfc26 in std::__new_allocator<char>::allocate(unsigned long, void const*) /usr/include/c++/13/bits/new_allocator.h:147
-    #2 0x5645466ced51 in std::allocator<char>::allocate(unsigned long) /usr/include/c++/13/bits/allocator.h:198
-    #3 0x5645466ced51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/alloc_traits.h:482
-    #4 0x5645466ced51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/basic_string.h:126
-    #5 0x5645466ce23f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:155
-    #6 0x5645466cca83 in void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) /usr/include/c++/13/bits/basic_string.tcc:225
-    #7 0x5645466ca446 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /usr/include/c++/13/bits/basic_string.h:541
-    #8 0x5645466c14af in main /tmp/tmpgqmqugdu/student/main.cpp:107
-    #9 0x7f0ab5b27d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f02ae776ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x558eeafe2c26 in std::__new_allocator<char>::allocate(unsigned long, void const*) /usr/include/c++/13/bits/new_allocator.h:147
+    #2 0x558eeafe1d51 in std::allocator<char>::allocate(unsigned long) /usr/include/c++/13/bits/allocator.h:198
+    #3 0x558eeafe1d51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/alloc_traits.h:482
+    #4 0x558eeafe1d51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/basic_string.h:126
+    #5 0x558eeafe123f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:155
+    #6 0x558eeafdfa83 in void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) /usr/include/c++/13/bits/basic_string.tcc:225
+    #7 0x558eeafdd446 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /usr/include/c++/13/bits/basic_string.h:541
+    #8 0x558eeafd44af in main /tmp/tmpps3jlajo/student/main.cpp:107
+    #9 0x7f02adb0fd8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 179 byte(s) leaked in 6 allocation(s).
 
 
-[  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/0, where GetParam() = "sumStringObject" (1008 ms)
+[  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/0, where GetParam() = "sumStringObject" (1005 ms)
 [ RUN      ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/1
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:131: Failure
+/tmp/tmpps3jlajo/student/system_tests/executableTests.cpp:131: Failure
 Expected equality of these values:
   0
   output.linesOfStderr_.size()
@@ -461,29 +435,29 @@ Expected equality of these values:
 unexpected stderror output:
 
 =================================================================
-==457==ERROR: LeakSanitizer: detected memory leaks
+==441==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 120 byte(s) in 3 object(s) allocated from:
-    #0 0x7ff2bfc0eba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x55e61aafb44d in main /tmp/tmpgqmqugdu/student/main.cpp:107
-    #2 0x7ff2befa7d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7ff399f0cba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x55579397a44d in main /tmp/tmpps3jlajo/student/main.cpp:107
+    #2 0x7ff3992a5d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 32 byte(s) in 2 object(s) allocated from:
-    #0 0x7ff2bfc0eba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x55e61aafad58 in main /tmp/tmpgqmqugdu/student/main.cpp:70
-    #2 0x7ff2befa7d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7ff399f0cba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x555793979d58 in main /tmp/tmpps3jlajo/student/main.cpp:70
+    #2 0x7ff3992a5d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7ff2bfc0eba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x55e61aafacb7 in main /tmp/tmpgqmqugdu/student/main.cpp:67
-    #2 0x7ff2befa7d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7ff399f0cba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x555793979cb7 in main /tmp/tmpps3jlajo/student/main.cpp:67
+    #2 0x7ff3992a5d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 168 byte(s) leaked in 6 allocation(s).
 
 
 [  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/1, where GetParam() = "sumDoubleObject" (1004 ms)
 [ RUN      ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/2
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:131: Failure
+/tmp/tmpps3jlajo/student/system_tests/executableTests.cpp:131: Failure
 Expected equality of these values:
   0
   output.linesOfStderr_.size()
@@ -491,50 +465,50 @@ Expected equality of these values:
 unexpected stderror output:
 
 =================================================================
-==461==ERROR: LeakSanitizer: detected memory leaks
+==445==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 40 byte(s) in 1 object(s) allocated from:
-    #0 0x7fa48f7baba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x555c3e7b244d in main /tmp/tmpgqmqugdu/student/main.cpp:107
-    #2 0x7fa48eb53d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f55c3db8ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5594f9b2444d in main /tmp/tmpps3jlajo/student/main.cpp:107
+    #2 0x7f55c3151d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7fa48f7baba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x555c3e7b23c6 in main /tmp/tmpgqmqugdu/student/main.cpp:105
-    #2 0x7fa48eb53d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f55c3db8ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5594f9b243c6 in main /tmp/tmpps3jlajo/student/main.cpp:105
+    #2 0x7f55c3151d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7fa48f7baba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x555c3e7b1cb7 in main /tmp/tmpgqmqugdu/student/main.cpp:67
-    #2 0x7fa48eb53d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f55c3db8ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5594f9b23cb7 in main /tmp/tmpps3jlajo/student/main.cpp:67
+    #2 0x7f55c3151d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Direct leak of 16 byte(s) in 1 object(s) allocated from:
-    #0 0x7fa48f7baba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x555c3e7b1d58 in main /tmp/tmpgqmqugdu/student/main.cpp:70
-    #2 0x7fa48eb53d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f55c3db8ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5594f9b23d58 in main /tmp/tmpps3jlajo/student/main.cpp:70
+    #2 0x7f55c3151d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 Indirect leak of 33 byte(s) in 1 object(s) allocated from:
-    #0 0x7fa48f7baba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x555c3e7c0c26 in std::__new_allocator<char>::allocate(unsigned long, void const*) /usr/include/c++/13/bits/new_allocator.h:147
-    #2 0x555c3e7bfd51 in std::allocator<char>::allocate(unsigned long) /usr/include/c++/13/bits/allocator.h:198
-    #3 0x555c3e7bfd51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/alloc_traits.h:482
-    #4 0x555c3e7bfd51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/basic_string.h:126
-    #5 0x555c3e7bf23f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:155
-    #6 0x555c3e7c0842 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:328
-    #7 0x555c3e7c059e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:419
-    #8 0x555c3e7bfa72 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) /usr/include/c++/13/bits/basic_string.h:1447
-    #9 0x555c3e7bd6ea in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /usr/include/c++/13/bits/basic_string.h:1413
-    #10 0x555c3e7bc3a8 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /usr/include/c++/13/bits/basic_string.h:1355
-    #11 0x555c3e7c57ab in StringObject::multiply(int) /tmp/tmpgqmqugdu/student/stringObject.cpp:18
-    #12 0x555c3e7b55ff in main /tmp/tmpgqmqugdu/student/main.cpp:182
-    #13 0x7fa48eb53d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f55c3db8ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x5594f9b32c26 in std::__new_allocator<char>::allocate(unsigned long, void const*) /usr/include/c++/13/bits/new_allocator.h:147
+    #2 0x5594f9b31d51 in std::allocator<char>::allocate(unsigned long) /usr/include/c++/13/bits/allocator.h:198
+    #3 0x5594f9b31d51 in std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/alloc_traits.h:482
+    #4 0x5594f9b31d51 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_S_allocate(std::allocator<char>&, unsigned long) /usr/include/c++/13/bits/basic_string.h:126
+    #5 0x5594f9b3123f in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_create(unsigned long&, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:155
+    #6 0x5594f9b32842 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:328
+    #7 0x5594f9b3259e in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_append(char const*, unsigned long) /usr/include/c++/13/bits/basic_string.tcc:419
+    #8 0x5594f9b31a72 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(char const*, unsigned long) /usr/include/c++/13/bits/basic_string.h:1447
+    #9 0x5594f9b2f6ea in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::append(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /usr/include/c++/13/bits/basic_string.h:1413
+    #10 0x5594f9b2e3a8 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator+=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /usr/include/c++/13/bits/basic_string.h:1355
+    #11 0x5594f9b377ab in StringObject::multiply(int) /tmp/tmpps3jlajo/student/stringObject.cpp:18
+    #12 0x5594f9b275ff in main /tmp/tmpps3jlajo/student/main.cpp:182
+    #13 0x7f55c3151d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 121 byte(s) leaked in 5 allocation(s).
 
 
-[  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/2, where GetParam() = "mulDifferentTypes" (1008 ms)
+[  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/2, where GetParam() = "mulDifferentTypes" (1006 ms)
 [ RUN      ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/3
-/tmp/tmpgqmqugdu/student/system_tests/executableTests.cpp:131: Failure
+/tmp/tmpps3jlajo/student/system_tests/executableTests.cpp:131: Failure
 Expected equality of these values:
   0
   output.linesOfStderr_.size()
@@ -542,29 +516,26 @@ Expected equality of these values:
 unexpected stderror output:
 
 =================================================================
-==465==ERROR: LeakSanitizer: detected memory leaks
+==449==ERROR: LeakSanitizer: detected memory leaks
 
 Direct leak of 80 byte(s) in 5 object(s) allocated from:
-    #0 0x7f7e810f5ba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
-    #1 0x5577389823c6 in main /tmp/tmpgqmqugdu/student/main.cpp:105
-    #2 0x7f7e8048ed8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #0 0x7f6807b3fba8 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x562f43ba83c6 in main /tmp/tmpps3jlajo/student/main.cpp:105
+    #2 0x7f6806ed8d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 80 byte(s) leaked in 5 allocation(s).
 
 
-[  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/3, where GetParam() = "getByIndexComplexObject" (1005 ms)
-[----------] 4 tests from CommandsParserSystemTester/CommandsParserSystemTester (4026 ms total)
+[  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/3, where GetParam() = "getByIndexComplexObject" (1003 ms)
+[----------] 4 tests from CommandsParserSystemTester/CommandsParserSystemTester (4019 ms total)
 
 [----------] Global test environment tear-down
-[==========] 10 tests from 2 test suites ran. (10047 ms total)
-[  PASSED  ] 3 tests.
-[  FAILED  ] 7 tests, listed below:
-[  FAILED  ] CommandsParserSystemTester.addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted
-[  FAILED  ] CommandsParserSystemTester.addingManyTypesThenSumOfDoubles_expectedSumOfDoublesPrinted
-[  FAILED  ] CommandsParserSystemTester.multiplyAllObjectsThenSum_expectedSumDoubledOfAllTypes
+[==========] 6 tests from 2 test suites ran. (6156 ms total)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 4 tests, listed below:
 [  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/0, where GetParam() = "sumStringObject"
 [  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/1, where GetParam() = "sumDoubleObject"
 [  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/2, where GetParam() = "mulDifferentTypes"
 [  FAILED  ] CommandsParserSystemTester/CommandsParserSystemTester.testVariousScenariosUsingInputAndOutputFiles/3, where GetParam() = "getByIndexComplexObject"
 
- 7 FAILED TESTS
+ 4 FAILED TESTS
