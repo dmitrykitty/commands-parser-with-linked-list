@@ -9,7 +9,7 @@ cmake_policy(SET CMP0074 NEW)
 # Wskażemy, gdzie leży ta dostarczona z testami wersja Boost 1.81
 # (to katalog, w którym masz /boost i podfoldery stage/lib czy lib)
 set(Boost_ROOT        "${CMAKE_SOURCE_DIR}/system_tests/libs/boost_1_81")
-set(Boost_INCLUDEDIR  "${Boost_ROOT}")
+set(BOOST_INCLUDEDIR  "${Boost_ROOT}")
 set(BOOST_LIBRARYDIR  "${Boost_ROOT}/stage/lib")  # lub lib, zależy od struktury
 
 # Teraz znajdź Boost 1.81 z COMPONENTS filesystem i system
