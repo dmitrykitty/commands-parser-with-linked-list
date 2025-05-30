@@ -83,3 +83,13 @@
 835	1455	7703208657761730	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e
 15	777	7703208988556700	CMakeFiles/zad8CommandsParser_dlaStudentow.dir/complexObject.cpp.obj	8082e5480efa80ff
 777	1400	7703208996176527	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e
+39	1649	7703217126831224	unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.obj	df4f4482bca53501
+33	1651	7703217126770339	unit_tests/CMakeFiles/unit_tests.dir/__/intObject.cpp.obj	751fb1fe5f7b7849
+56	1696	7703217127010162	unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.obj	d4a5c2cd909b580b
+27	1736	7703217126718898	unit_tests/CMakeFiles/unit_tests.dir/__/doubleObject.cpp.obj	8e2ff2ca57425d8c
+21	2149	7703217126657519	unit_tests/CMakeFiles/unit_tests.dir/__/complexObject.cpp.obj	ee183a3e492c8bde
+48	2184	7703217126924168	unit_tests/CMakeFiles/unit_tests.dir/__/objectlist.cpp.obj	ddb23fd700e42d0f
+15	4245	7703217126596213	unit_tests/CMakeFiles/unit_tests.dir/objectUniqueListTest.cpp.obj	627415d1174cb175
+4245	10557	7703217168898670	bin/unit_tests.exe	2dd33441796d10e
+16	1196	7703217289345755	CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.obj	c8d65368ecbdfe6
+1196	1942	7703217301148282	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e

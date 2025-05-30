@@ -60,6 +60,7 @@ int main() {
             // usuń końcowe spacje
             val.erase(val.find_last_not_of(' ') + 1);
 
+
             try {
                 if (type == "IntObject") {
                     int v = std::stoi(val);
