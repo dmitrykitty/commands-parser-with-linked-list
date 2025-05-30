@@ -28,7 +28,7 @@ ObjectList::ObjectList(ObjectList&& other) noexcept {
     other.size_ = 0;
 }
 
-ObjectList::~ObjectList() = default;
+ObjectList::~ObjectList(){ clear(); }
 
 bool ObjectList::contains(const value_type& obj) const {
     for (const auto& o: *this)

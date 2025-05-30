@@ -143,14 +143,18 @@ int main() {
                         << "i)\n";
             } else if (type == "StringObject") {
                 std::string acc;
-                bool first = true;
+                bool found = false; // <-- sprawdzamy, czy cokolwiek zebraliśmy
                 for (auto& o: list)
                     if (auto p = dynamic_cast<StringObject *>(&o)) {
-                        if (!first) acc += " ";
-                        acc += p->text;
-                        first = false;
+                        if (!found)
+                            acc = p->text; // pierwszy element – bez spacji
+                        else
+                            acc += " " + p->text; // kolejne – oddzielone spacją
+                        found = true;
                     }
-                std::cout << "StringObject(\"" << acc << "\")\n";
+                if (found) // wypisuj tylko, gdy faktycznie coś było
+                    std::cout << "StringObject(\"" << acc << "\")\n";
+                /* jeśli found == false --> brak wypisu, test oczekuje pustego stdout */
             } else {
                 std::cerr << "Error: wrong type\n";
             }

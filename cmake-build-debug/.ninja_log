@@ -27,3 +27,9 @@
 29	2344	7703016040384849	system_tests/libs/tiny-process-library/CMakeFiles/tiny-process-library.dir/process_win.cpp.obj	18af2b45b068b9cf
 3081	10001	7703194717136939	bin/system_tests.exe	887a7e8e8c5e8285
 8	695	7703254887186881	build.ninja	fa76fc610801ce49
+11	3118	7703260486730196	system_tests/CMakeFiles/system_tests.dir/executableTests.cpp.obj	dc0fb88f979e7b7b
+3118	10204	7703260517798886	bin/system_tests.exe	887a7e8e8c5e8285
+11	852	7703266217858524	CMakeFiles/zad8CommandsParser_dlaStudentow.dir/objectlist.cpp.obj	58e7084bca2156a6
+853	1486	7703266226287359	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e
+14	1202	7703268764171534	CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.obj	c8d65368ecbdfe6
+1202	1854	7703268776060584	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e

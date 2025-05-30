@@ -145,7 +145,7 @@ INSTANTIATE_TEST_SUITE_P(CommandsParserSystemTester,
                                          "sumDoubleObject",
                                          "mulDifferentTypes",
                                          "getByIndexComplexObject"));
-/* TEST_P(CommandsParserSystemTester, testVariousScenariosUsingInputAndOutputFiles) jest zamiast poniższych:
+//TEST_P(CommandsParserSystemTester, testVariousScenariosUsingInputAndOutputFiles) jest zamiast poniższych:
 TEST_F(CommandsParserSystemTester, addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted)
 {
     const auto [inputFile, expectedOutputFile] = getPairOfIOTestFilesForBasename("sumStringObject");
@@ -213,4 +213,4 @@ TEST_F(CommandsParserSystemTester, sumStringObjectWhenNoStringObject_expectedNoO
                 << "indexOfLine=" << lineIndex << ", source file: " << inputFile << ", expected output file: " << expectedOutputFile;
     }
 }
-*/
+
