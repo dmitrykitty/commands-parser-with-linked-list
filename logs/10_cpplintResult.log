@@ -1,0 +1,101 @@
+make: Entering directory '/tmp/tmph24ta1zp/student/build'
+make[1]: Entering directory '/tmp/tmph24ta1zp/student/build'
+make[2]: Entering directory '/tmp/tmph24ta1zp/student/build'
+make[3]: Entering directory '/tmp/tmph24ta1zp/student/build'
+make[3]: Leaving directory '/tmp/tmph24ta1zp/student/build'
+make[3]: Entering directory '/tmp/tmph24ta1zp/student/build'
+[100%] Running cpplint to check for tabs and trailing whitespace
+/tmp/tmph24ta1zp/student/complexObject.cpp:19:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/complexObject.h:11:  public: should be indented +1 space inside class ComplexObject  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/complexObject.h:15:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmph24ta1zp/student/complexObject.h:18:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/doubleObject.cpp:11:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/doubleObject.h:5:  public: should be indented +1 space inside class DoubleObject  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/doubleObject.h:9:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmph24ta1zp/student/doubleObject.h:12:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/intObject.cpp:12:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+/tmp/tmph24ta1zp/student/intObject.h:9:  public: should be indented +1 space inside class IntObject  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/intObject.h:13:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmph24ta1zp/student/intObject.h:16:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:22:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:22:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/main.cpp:38:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/main.cpp:80:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:80:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/main.cpp:83:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:95:  Else clause should never be on same line as else (use 2 lines)  [whitespace/newline] [4]
+/tmp/tmph24ta1zp/student/main.cpp:98:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:98:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/main.cpp:102:  Else clause should never be on same line as else (use 2 lines)  [whitespace/newline] [4]
+/tmp/tmph24ta1zp/student/main.cpp:124:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmph24ta1zp/student/main.cpp:130:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmph24ta1zp/student/main.cpp:138:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmph24ta1zp/student/main.cpp:147:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmph24ta1zp/student/main.cpp:177:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmph24ta1zp/student/main.cpp:191:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:198:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:206:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:207:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:209:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:210:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:212:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:213:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/main.cpp:214:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/object.h:8:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmph24ta1zp/student/object.h:9:  public: should be indented +1 space inside class Object  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/object.h:20:  Could not find a newline character at the end of the file.  [whitespace/ending_newline] [5]
+/tmp/tmph24ta1zp/student/objectlist.cpp:34:  Missing space around colon in range-based for loop  [whitespace/forcolon] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:3:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:7:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:8:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:9:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:10:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:11:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:12:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:13:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:14:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:15:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:16:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:23:  public: should be indented +1 space inside class ObjectList  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/objectlist.h:26:  private: should be indented +1 space inside class ObjectList  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/objectlist.h:33:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmph24ta1zp/student/objectlist.h:40:  public: should be indented +1 space inside class ObjectList  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/objectlist.h:42:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:42:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:42:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:43:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:51:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:51:  Should have a space between // and comment  [whitespace/comments] [4]
+/tmp/tmph24ta1zp/student/objectlist.h:82:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:83:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:87:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:92:  Extra space before last semicolon. If this should be an empty statement, use {} instead.  [whitespace/semicolon] [5]
+/tmp/tmph24ta1zp/student/objectlist.h:96:  Extra space before last semicolon. If this should be an empty statement, use {} instead.  [whitespace/semicolon] [5]
+/tmp/tmph24ta1zp/student/objectlist.h:102:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+/tmp/tmph24ta1zp/student/objectlist.h:129:  protected: should be indented +1 space inside class ObjectList  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/stringObject.h:9:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+/tmp/tmph24ta1zp/student/stringObject.h:10:  public: should be indented +1 space inside class StringObject  [whitespace/indent] [3]
+/tmp/tmph24ta1zp/student/stringObject.h:14:  Missing space before {  [whitespace/braces] [5]
+/tmp/tmph24ta1zp/student/stringObject.h:17:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+Done processing /tmp/tmph24ta1zp/student/complexObject.cpp
+Done processing /tmp/tmph24ta1zp/student/complexObject.h
+Done processing /tmp/tmph24ta1zp/student/doubleObject.cpp
+Done processing /tmp/tmph24ta1zp/student/doubleObject.h
+Done processing /tmp/tmph24ta1zp/student/intObject.cpp
+Done processing /tmp/tmph24ta1zp/student/intObject.h
+Done processing /tmp/tmph24ta1zp/student/main.cpp
+Done processing /tmp/tmph24ta1zp/student/object.cpp
+Done processing /tmp/tmph24ta1zp/student/object.h
+Done processing /tmp/tmph24ta1zp/student/objectlist.cpp
+Done processing /tmp/tmph24ta1zp/student/objectlist.h
+Done processing /tmp/tmph24ta1zp/student/stringObject.cpp
+Done processing /tmp/tmph24ta1zp/student/stringObject.h
+Total errors found: 72
+make[3]: *** [CMakeFiles/cpplint.dir/build.make:71: CMakeFiles/cpplint] Error 1
+make[3]: Leaving directory '/tmp/tmph24ta1zp/student/build'
+make[2]: *** [CMakeFiles/Makefile2:411: CMakeFiles/cpplint.dir/all] Error 2
+make[2]: Leaving directory '/tmp/tmph24ta1zp/student/build'
+make[1]: *** [CMakeFiles/Makefile2:418: CMakeFiles/cpplint.dir/rule] Error 2
+make[1]: Leaving directory '/tmp/tmph24ta1zp/student/build'
+make: *** [Makefile:273: cpplint] Error 2
+make: Leaving directory '/tmp/tmph24ta1zp/student/build'

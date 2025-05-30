@@ -1,0 +1,45 @@
+[  8%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 16%] Linking CXX static library ../../../lib/libgtest.a
+[ 16%] Built target gtest
+[ 25%] Building CXX object unit_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 33%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 33%] Built target gtest_main
+[ 58%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/doubleObject.cpp.o
+[ 58%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/complexObject.cpp.o
+[ 58%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/objectUniqueListTest.cpp.o
+[ 66%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/intObject.cpp.o
+[ 75%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/object.cpp.o
+[ 83%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/objectlist.cpp.o
+[ 91%] Building CXX object unit_tests/CMakeFiles/unit_tests.dir/__/stringObject.cpp.o
+/tmp/tmph24ta1zp/student/unit_tests/objectUniqueListTest.cpp: In member function ‘virtual void ObjectListTester_assignmentOperatorMoving_expectedAllElementsMoved_Test::TestBody()’:
+/tmp/tmph24ta1zp/student/unit_tests/objectUniqueListTest.cpp:497:13: warning: moving ‘myList1’ of type ‘ObjectList’ to itself [-Wself-move]
+  497 |     myList1 = std::move(myList1);
+      |     ~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+/tmp/tmph24ta1zp/student/unit_tests/objectUniqueListTest.cpp:497:13: note: remove ‘std::move’ call
+[100%] Linking CXX executable ../bin/unit_tests
+[100%] Built target unit_tests
+[  5%] Building CXX object system_tests/libs/tiny-process-library/CMakeFiles/tiny-process-library.dir/process_unix.cpp.o
+[ 16%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.o
+[ 16%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/doubleObject.cpp.o
+[ 22%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/object.cpp.o
+[ 27%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/objectlist.cpp.o
+[ 33%] Building CXX object system_tests/libs/tiny-process-library/CMakeFiles/tiny-process-library.dir/process.cpp.o
+[ 38%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/complexObject.cpp.o
+[ 44%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/intObject.cpp.o
+[ 50%] Building CXX object CMakeFiles/zad8CommandsParser_dlaStudentow.dir/stringObject.cpp.o
+Consolidate compiler generated dependencies of target gtest
+[ 61%] Built target gtest
+Consolidate compiler generated dependencies of target gtest_main
+[ 72%] Built target gtest_main
+[ 77%] Linking CXX executable bin/zad8CommandsParser_dlaStudentow
+[ 77%] Built target zad8CommandsParser_dlaStudentow
+[ 83%] Linking CXX static library libtiny-process-library.a
+[ 83%] Built target tiny-process-library
+[ 88%] Building CXX object system_tests/CMakeFiles/system_tests.dir/executableTests.cpp.o
+[ 94%] Building CXX object system_tests/CMakeFiles/system_tests.dir/runningexternalprogram.cpp.o
+/tmp/tmph24ta1zp/student/system_tests/runningexternalprogram.cpp: In function ‘void {anonymous}::sendInput2Process(const std::string&, const std::string&, bool, TinyProcessLib::Process&)’:
+/tmp/tmph24ta1zp/student/system_tests/runningexternalprogram.cpp:142:29: warning: unused parameter ‘inputAvailable’ [-Wunused-parameter]
+  142 |                        bool inputAvailable,
+      |                        ~~~~~^~~~~~~~~~~~~~
+[100%] Linking CXX executable ../bin/system_tests
+[100%] Built target system_tests

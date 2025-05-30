@@ -10,32 +10,32 @@
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
-CMake Warning at /usr/share/cmake-3.22/Modules/FindBoost.cmake:1369 (message):
-  New Boost version may have incorrect or missing dependencies and imported
-  targets
-Call Stack (most recent call first):
-  /usr/share/cmake-3.22/Modules/FindBoost.cmake:1492 (_Boost_COMPONENT_DEPENDENCIES)
-  /usr/share/cmake-3.22/Modules/FindBoost.cmake:2102 (_Boost_MISSING_DEPENDENCIES)
-  CMakeLists.txt:16 (find_package)
-
-
-CMake Warning at /usr/share/cmake-3.22/Modules/FindBoost.cmake:1369 (message):
-  New Boost version may have incorrect or missing dependencies and imported
-  targets
-Call Stack (most recent call first):
-  /usr/share/cmake-3.22/Modules/FindBoost.cmake:1492 (_Boost_COMPONENT_DEPENDENCIES)
-  /usr/share/cmake-3.22/Modules/FindBoost.cmake:2102 (_Boost_MISSING_DEPENDENCIES)
-  CMakeLists.txt:16 (find_package)
-
-
-CMake Error at /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:230 (message):
-  Could NOT find Boost (missing: filesystem system) (found suitable version
-  "1.82.0", minimum required is "1.81")
-Call Stack (most recent call first):
-  /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake:594 (_FPHSA_FAILURE_MESSAGE)
-  /usr/share/cmake-3.22/Modules/FindBoost.cmake:2360 (find_package_handle_standard_args)
-  CMakeLists.txt:16 (find_package)
-
-
--- Configuring incomplete, errors occurred!
-See also "/tmp/tmp_ubeldee/student/build/CMakeFiles/CMakeOutput.log".
+-- Looking for __asan_init in asan
+-- Looking for __asan_init in asan - found
+-- Looking for __ubsan_handle_add_overflow in ubsan
+-- Looking for __ubsan_handle_add_overflow in ubsan - found
+-- Sanitizers (AddressSanitizer + UndefinedBehaviorSanitizer) są dostępne
+-- Znaleziono include-what-you-use: /usr/bin/include-what-you-use
+-- Używany mapping IWYU: /tmp/tmph24ta1zp/student/unit_tests/include-what-you-use_exceptions.imp
+Katalog do zbudowanego projektu: /tmp/tmph24ta1zp/student/build
+ + Znaleziono nagłówki: /tmp/tmph24ta1zp/student/complexObject.h;/tmp/tmph24ta1zp/student/doubleObject.h;/tmp/tmph24ta1zp/student/intObject.h;/tmp/tmph24ta1zp/student/object.h;/tmp/tmph24ta1zp/student/objectlist.h;/tmp/tmph24ta1zp/student/stringObject.h
+ + Znaleziono źródła: /tmp/tmph24ta1zp/student/complexObject.cpp;/tmp/tmph24ta1zp/student/doubleObject.cpp;/tmp/tmph24ta1zp/student/intObject.cpp;/tmp/tmph24ta1zp/student/main.cpp;/tmp/tmph24ta1zp/student/object.cpp;/tmp/tmph24ta1zp/student/objectlist.cpp;/tmp/tmph24ta1zp/student/stringObject.cpp
+ + Znaleziono źródła bez main.cpp: /tmp/tmph24ta1zp/student/complexObject.cpp;/tmp/tmph24ta1zp/student/doubleObject.cpp;/tmp/tmph24ta1zp/student/intObject.cpp;/tmp/tmph24ta1zp/student/object.cpp;/tmp/tmph24ta1zp/student/objectlist.cpp;/tmp/tmph24ta1zp/student/stringObject.cpp
+	* valgrind found: /usr/bin/valgrind
+	* cppcheck found: /usr/local/bin/cppcheck
+	+ adding command found: `cpplint` which would check trailing whitespaces and tabs in files: /tmp/tmph24ta1zp/student/complexObject.h;/tmp/tmph24ta1zp/student/doubleObject.h;/tmp/tmph24ta1zp/student/intObject.h;/tmp/tmph24ta1zp/student/object.h;/tmp/tmph24ta1zp/student/objectlist.h;/tmp/tmph24ta1zp/student/stringObject.h and /tmp/tmph24ta1zp/student/complexObject.cpp;/tmp/tmph24ta1zp/student/doubleObject.cpp;/tmp/tmph24ta1zp/student/intObject.cpp;/tmp/tmph24ta1zp/student/main.cpp;/tmp/tmph24ta1zp/student/object.cpp;/tmp/tmph24ta1zp/student/objectlist.cpp;/tmp/tmph24ta1zp/student/stringObject.cpp
+	+ adding command found: `clang-tidy` to run static analysis on source files: /tmp/tmph24ta1zp/student/complexObject.cpp;/tmp/tmph24ta1zp/student/doubleObject.cpp;/tmp/tmph24ta1zp/student/intObject.cpp;/tmp/tmph24ta1zp/student/main.cpp;/tmp/tmph24ta1zp/student/object.cpp;/tmp/tmph24ta1zp/student/objectlist.cpp;/tmp/tmph24ta1zp/student/stringObject.cpp and /tmp/tmph24ta1zp/student/complexObject.h;/tmp/tmph24ta1zp/student/doubleObject.h;/tmp/tmph24ta1zp/student/intObject.h;/tmp/tmph24ta1zp/student/object.h;/tmp/tmph24ta1zp/student/objectlist.h;/tmp/tmph24ta1zp/student/stringObject.h
+	+ adding command found: `flawfinder` to perform security analysis on files: /tmp/tmph24ta1zp/student/complexObject.cpp;/tmp/tmph24ta1zp/student/doubleObject.cpp;/tmp/tmph24ta1zp/student/intObject.cpp;/tmp/tmph24ta1zp/student/main.cpp;/tmp/tmph24ta1zp/student/object.cpp;/tmp/tmph24ta1zp/student/objectlist.cpp;/tmp/tmph24ta1zp/student/stringObject.cpp and /tmp/tmph24ta1zp/student/complexObject.h;/tmp/tmph24ta1zp/student/doubleObject.h;/tmp/tmph24ta1zp/student/intObject.h;/tmp/tmph24ta1zp/student/object.h;/tmp/tmph24ta1zp/student/objectlist.h;/tmp/tmph24ta1zp/student/stringObject.h
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+ + Znaleziono pliki testów: /tmp/tmph24ta1zp/student/unit_tests/objectUniqueListTest.cpp
+ + katalog nagłówków: 
+	* perf found: /usr/bin/perf, so adding command: 'perf_stats_unit_tests'
+ + Znaleziono pliki wejścia/wyjścia do testów: /tmp/tmph24ta1zp/student/system_tests/inputOutputData/getByIndexComplexObject.in.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/getByIndexComplexObject.out.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/mulDifferentTypes.in.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/mulDifferentTypes.out.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/sumDoubleObject.in.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/sumDoubleObject.out.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/sumStringObject.in.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/sumStringObject.out.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/sumStringObjectWhenNoStringObject.in.txt;/tmp/tmph24ta1zp/student/system_tests/inputOutputData/sumStringObjectWhenNoStringObject.out.txt
+Using Tiny Process Library
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmph24ta1zp/student/build
