@@ -33,3 +33,5 @@
 853	1486	7703266226287359	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e
 14	1202	7703268764171534	CMakeFiles/zad8CommandsParser_dlaStudentow.dir/main.cpp.obj	c8d65368ecbdfe6
 1202	1854	7703268776060584	bin/zad8CommandsParser_dlaStudentow.exe	1187b7ba45e6291e
+13	3191	7703278439734194	system_tests/CMakeFiles/system_tests.dir/executableTests.cpp.obj	dc0fb88f979e7b7b
+3191	10208	7703278471521258	bin/system_tests.exe	887a7e8e8c5e8285

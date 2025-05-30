@@ -146,7 +146,7 @@ INSTANTIATE_TEST_SUITE_P(CommandsParserSystemTester,
                                          "mulDifferentTypes",
                                          "getByIndexComplexObject"));
 //TEST_P(CommandsParserSystemTester, testVariousScenariosUsingInputAndOutputFiles) jest zamiast poniższych:
-TEST_F(CommandsParserSystemTester, addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted)
+/*TEST_F(CommandsParserSystemTester, addingManyTypesThenSumOfStrings_expectedSumOfStringsPrinted)
 {
     const auto [inputFile, expectedOutputFile] = getPairOfIOTestFilesForBasename("sumStringObject");
     const auto expectedOutputFileLines = readLinesOfFile(expectedOutputFile);
@@ -212,5 +212,5 @@ TEST_F(CommandsParserSystemTester, sumStringObjectWhenNoStringObject_expectedNoO
         ASSERT_EQ(expectedOutputFileLines[lineIndex], output.linesOfStdout_[lineIndex])
                 << "indexOfLine=" << lineIndex << ", source file: " << inputFile << ", expected output file: " << expectedOutputFile;
     }
-}
+}*/
 
